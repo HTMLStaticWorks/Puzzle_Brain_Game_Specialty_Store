@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PuzzleLab | Home 2</title>
+  <meta name="description"
+    content="Discover premium puzzles, brain games, and custom photo puzzles at PuzzleLab. Shop by difficulty and category to find your perfect mind-bending challenge.">
+
+  <!-- SEO Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "PuzzleLab",
+    "description": "Specialty Puzzles & Brain Games Store",
+    "url": "https://www.puzzlelab.example.com"
+  }
+  </script>
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+
+  <!-- Drawer Overlay -->
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="drawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <i class="ph-fill ph-puzzle-piece"></i> PuzzleLab
+      </div>
+      <button class="icon-btn drawer-close" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <nav class="nav-links drawer-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="home2.html" class="nav-link active">Home 2</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="custom-photo-puzzle.html" class="nav-link">Custom Photo Puzzle</a>
+      <a href="gifting.html" class="nav-link">Gifting</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions drawer-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-puzzle-piece"></i> PuzzleLab
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link active">Home 2</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="custom-photo-puzzle.html" class="nav-link">Custom Photo Puzzle</a>
+        <a href="gifting.html" class="nav-link">Gifting</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary nav-btn">Contact</a>
+        <button class="icon-btn hamburger" aria-label="Open menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="section hero hero-bg"
+      style="--hero-img: url('assets/images/hero-brain-training-bg.jpg'); padding-block: var(--space-12); text-align: center; overflow: hidden;">
+      <div class="hero-glow a"></div>
+      <div class="hero-glow b"></div>
+      <div class="dot-grid"></div>
+
+      <div class="container animate-fade-in-up" style="position: relative; z-index: 2; max-width: 820px;">
+        <span class="eyebrow"><i class="ph-fill ph-brain"></i> Brain training, the analogue way</span>
+        <h1 style="margin-block-end: var(--space-4);">Sharpen your mind,<br><span class="text-grad">one piece at a
+            time.</span></h1>
+        <p class="lead" style="margin-block-end: var(--space-6); max-inline-size: 58ch; margin-inline: auto;">
+          Tactile challenges engineered to test logic, patience and creativity &mdash; rated and solved by our own team
+          before they ever reach you.
+        </p>
+        <div style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+          <a href="products.html" class="btn btn-primary">Start exploring <i class="ph ph-arrow-right"></i></a>
+          <a href="#warmup" class="btn btn-outline">Play a warm-up</a>
+        </div>
+
+        <div class="stat-row" style="justify-content: center;">
+          <div><span class="stat-num">18</span><span class="stat-label">Master artisans</span></div>
+          <div><span class="stat-num">2,400+</span><span class="stat-label">Reviews</span></div>
+          <div><span class="stat-num">100%</span><span class="stat-label">Solved in-house</span></div>
+        </div>
+      </div>
+
+      <i class="ph-fill ph-puzzle-piece animate-float"
+        style="position: absolute; top: 14%; left: 8%; font-size: 3.5rem; color: var(--color-primary-soft); z-index: 1;"></i>
+      <i class="ph-fill ph-cube animate-float"
+        style="position: absolute; bottom: 18%; right: 9%; font-size: 4.5rem; color: var(--color-secondary-soft); animation-delay: -3s; z-index: 1;"></i>
+    </section>
+
+    <!-- The PuzzleLab Experience (3 columns) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-sparkle"></i> The difference</span>
+          <h2>The PuzzleLab experience</h2>
+          <p>Why a tactile puzzle does something no app ever manages to.</p>
+        </div>
+        <div class="grid-3" style="--grid-gap: var(--space-4);">
+          <div class="card reveal" style="align-items: flex-start; text-align: start;">
+            <span class="card-media"><img src="assets/images/feature-hands-puzzle-screenfree.jpg"
+                alt="Hands assembling a jigsaw puzzle away from any screen" loading="lazy"></span>
+            <span class="icon-tile"><i class="ph-fill ph-device-mobile-slash"></i></span>
+            <h3>Screen-free joy</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.975rem;">Unplug and reconnect with physical, hands-on
+              problem solving that leaves no notifications behind.</p>
+          </div>
+          <div class="card reveal" style="align-items: flex-start; text-align: start;">
+            <span class="card-media"><img src="assets/images/feature-person-focused-logic-puzzle.jpg"
+                alt="A person concentrating on a logic puzzle" loading="lazy"></span>
+            <span class="icon-tile gold"><i class="ph-fill ph-lightning"></i></span>
+            <h3>Mind sharpening</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.975rem;">Memory, focus and spatial reasoning improve
+              measurably with every session at the table.</p>
+          </div>
+          <div class="card reveal" style="align-items: flex-start; text-align: start;">
+            <span class="card-media"><img src="assets/images/feature-wooden-pieces-closeup.jpg"
+                alt="Close-up of finely crafted wooden puzzle pieces" loading="lazy"></span>
+            <span class="icon-tile teal"><i class="ph-fill ph-medal"></i></span>
+            <h3>Premium craft</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.975rem;">Responsibly sourced hardwoods, 2.2mm
+              chipboard and soy-based inks in every single box.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE: Warm-up slide puzzle -->
+    <section class="section band-soft" id="warmup">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-game-controller"></i> Interactive</span>
+          <h2>Warm up before you shop</h2>
+          <p>A classic sliding-tile puzzle, right here in the page. Order the tiles 1 to 8 with the blank square in the
+            corner.</p>
+        </div>
+
+        <div class="slidegame reveal">
+          <div class="slide-board" id="slideBoard" role="group" aria-label="Sliding tile puzzle board"></div>
+
+          <div class="slidegame-info">
+            <span class="badge" style="margin-block-end: var(--space-3);">Difficulty · Easy</span>
+            <h3 style="margin-block-end: var(--space-2);">The 8-tile classic</h3>
+            <p style="color: var(--color-text-muted);">
+              Tap any tile next to the gap to slide it &mdash; highlighted tiles are the ones that can move. On a
+              keyboard, the arrow keys slide tiles into the gap. Every shuffle is checked to be solvable, so there is
+              always a way out.
+            </p>
+
+            <div class="slide-stats">
+              <div class="slide-stat">
+                <span class="v" id="slideMoves">0</span>
+                <span class="k">Moves</span>
+              </div>
+              <div class="slide-stat">
+                <span class="v" id="slideTime">00:00</span>
+                <span class="k">Time</span>
+              </div>
+            </div>
+
+            <div class="slide-win" id="slideWin" role="status"></div>
+
+            <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+              <button type="button" class="btn btn-primary" id="slideShuffle"><i class="ph ph-shuffle"></i> New
+                shuffle</button>
+              <a href="products.html" class="btn btn-outline">Shop the physical version</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Brain-Benders Showcase -->
+    <section class="section" id="brain-benders" style="padding-block: var(--space-8);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-lightning"></i> Hand-picked challenges</span>
+          <h2>Curated brain-benders</h2>
+          <p>Tactile masterpieces tested and rated by our master puzzle architects.</p>
+
+          <!-- Category Filter Pills -->
+          <div
+            style="display: flex; gap: var(--space-2); justify-content: center; flex-wrap: wrap; margin-block-start: var(--space-4);"
+            id="challenge-filters">
+            <button class="btn btn-primary challenge-filter-btn" data-filter="all"
+              style="padding: 8px 18px; font-size: 0.95rem;">All Puzzles</button>
+            <button class="btn btn-outline challenge-filter-btn" data-filter="mechanical"
+              style="padding: 8px 18px; font-size: 0.95rem;">Mechanical</button>
+            <button class="btn btn-outline challenge-filter-btn" data-filter="jigsaw"
+              style="padding: 8px 18px; font-size: 0.95rem;">Jigsaws</button>
+            <button class="btn btn-outline challenge-filter-btn" data-filter="maze"
+              style="padding: 8px 18px; font-size: 0.95rem;">3D Mazes</button>
+          </div>
+        </div>
+
+        <div class="grid-3" id="challenge-grid">
+
+          <!-- Card 1 -->
+          <div class="card challenge-item reveal" data-category="mechanical"
+            style="padding: 0; overflow: hidden; display: flex; flex-direction: column; text-align: start; transition: transform var(--transition-fast), box-shadow var(--transition-fast);">
+            <div style="position: relative; overflow: hidden; aspect-ratio: 4/3;">
+              <img src="assets/images/challenge-davinci-codex-box.jpg" alt="DaVinci Codex Box"
+                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <span class="badge badge-hot" style="position: absolute; top: 12px; inset-inline-start: 12px;">Top
+                Rated</span>
+              <div
+                style="position: absolute; bottom: 12px; inset-inline-end: 12px; background: rgba(0,0,0,0.65); backdrop-filter: blur(4px); color: #fff; padding: 4px 10px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 600; display: flex; align-items: center; gap: 4px;">
+                <i class="ph-bold ph-clock"></i> ~3.5 hrs
+              </div>
+            </div>
+            <div style="padding: var(--space-5); display: flex; flex-direction: column; flex-grow: 1;">
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-block-end: var(--space-2);">
+                <span
+                  style="font-size: 0.85rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase;">Mechanical</span>
+                <div style="display: flex; gap: 2px; color: #FFB703; font-size: 0.9rem;">
+                  <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                    class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                </div>
+              </div>
+              <h3 style="margin-block-end: var(--space-2); font-size: 1.25rem;">The DaVinci Codex Box</h3>
+              <p
+                style="color: var(--color-text-muted); font-size: 0.95rem; margin-block-end: var(--space-4); line-height: 1.5; flex-grow: 1;">
+                Sequential discovery lock box with 14 hidden steps, sliding dovetail joints, and solid birch wood
+                construction.</p>
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; padding-block-start: var(--space-3); border-block-start: 1px solid var(--color-border); margin-block-start: auto;">
+                <strong style="font-size: 1.3rem; color: var(--color-text);">$68.00</strong>
+                <a href="contact.html?product=codex" class="btn btn-primary"
+                  style="padding: 6px 16px; font-size: 0.9rem;">Enquire</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card challenge-item reveal" data-category="jigsaw"
+            style="padding: 0; overflow: hidden; display: flex; flex-direction: column; text-align: start; transition: transform var(--transition-fast), box-shadow var(--transition-fast);">
+            <div style="position: relative; overflow: hidden; aspect-ratio: 4/3;">
+              <img src="assets/images/challenge-nebula-symphony-jigsaw.jpg" alt="Nebula Symphony Jigsaw"
+                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <span class="badge"
+                style="position: absolute; top: 12px; inset-inline-start: 12px; background: var(--color-secondary); color: #fff;">1000
+                Pieces</span>
+              <div
+                style="position: absolute; bottom: 12px; inset-inline-end: 12px; background: rgba(0,0,0,0.65); backdrop-filter: blur(4px); color: #fff; padding: 4px 10px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 600; display: flex; align-items: center; gap: 4px;">
+                <i class="ph-bold ph-clock"></i> ~6-8 hrs
+              </div>
+            </div>
+            <div style="padding: var(--space-5); display: flex; flex-direction: column; flex-grow: 1;">
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-block-end: var(--space-2);">
+                <span
+                  style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); text-transform: uppercase;">Intricate
+                  Jigsaw</span>
+                <div style="display: flex; gap: 2px; color: #FFB703; font-size: 0.9rem;">
+                  <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                    class="ph-fill ph-star"></i><i class="ph ph-star"></i>
+                </div>
+              </div>
+              <h3 style="margin-block-end: var(--space-2); font-size: 1.25rem;">Nebula Symphony 1000pc</h3>
+              <p
+                style="color: var(--color-text-muted); font-size: 0.95rem; margin-block-end: var(--space-4); line-height: 1.5; flex-grow: 1;">
+                Precision laser-cut recycled Dutch blueboard with anti-glare linen texture and vivid celestial inks.</p>
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; padding-block-start: var(--space-3); border-block-start: 1px solid var(--color-border); margin-block-start: auto;">
+                <strong style="font-size: 1.3rem; color: var(--color-text);">$36.00</strong>
+                <a href="contact.html?product=nebula" class="btn btn-primary"
+                  style="padding: 6px 16px; font-size: 0.9rem;">Enquire</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card challenge-item reveal" data-category="maze"
+            style="padding: 0; overflow: hidden; display: flex; flex-direction: column; text-align: start; transition: transform var(--transition-fast), box-shadow var(--transition-fast);">
+            <div style="position: relative; overflow: hidden; aspect-ratio: 4/3;">
+              <img src="assets/images/challenge-titanium-gravity-labyrinth.jpg" alt="Titanium Gravity Labyrinth"
+                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+              <span class="badge"
+                style="position: absolute; top: 12px; inset-inline-start: 12px; background: #9D4EDD; color: #fff;">Kinetic</span>
+              <div
+                style="position: absolute; bottom: 12px; inset-inline-end: 12px; background: rgba(0,0,0,0.65); backdrop-filter: blur(4px); color: #fff; padding: 4px 10px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 600; display: flex; align-items: center; gap: 4px;">
+                <i class="ph-bold ph-clock"></i> ~1.5 hrs
+              </div>
+            </div>
+            <div style="padding: var(--space-5); display: flex; flex-direction: column; flex-grow: 1;">
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-block-end: var(--space-2);">
+                <span style="font-size: 0.85rem; font-weight: 700; color: #9D4EDD; text-transform: uppercase;">3D
+                  Gravity Maze</span>
+                <div style="display: flex; gap: 2px; color: #FFB703; font-size: 0.9rem;">
+                  <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                    class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i>
+                </div>
+              </div>
+              <h3 style="margin-block-end: var(--space-2); font-size: 1.25rem;">Titanium Sphere Labyrinth</h3>
+              <p
+                style="color: var(--color-text-muted); font-size: 0.95rem; margin-block-end: var(--space-4); line-height: 1.5; flex-grow: 1;">
+                Multi-plane spherical labyrinth requiring 360° dexterity, steady nerve control, and 118 obstacle
+                checkpoints.</p>
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; padding-block-start: var(--space-3); border-block-start: 1px solid var(--color-border); margin-block-start: auto;">
+                <strong style="font-size: 1.3rem; color: var(--color-text);">$42.00</strong>
+                <a href="contact.html?product=labyrinth" class="btn btn-primary"
+                  style="padding: 6px 16px; font-size: 0.9rem;">Enquire</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals Split -->
+    <section class="section band-soft">
+      <div class="container story-grid">
+        <div class="media-frame reveal" style="order: 2; aspect-ratio: 4/3;">
+          <img src="assets/images/arrival-wooden-puzzle-box.jpg" alt="A newly arrived wooden puzzle box">
+        </div>
+        <div class="story-content reveal" style="order: 1;">
+          <span class="eyebrow"><i class="ph-fill ph-package"></i> This week</span>
+          <h2 style="margin-block-end: var(--space-4);">Just landed</h2>
+          <p class="lead" style="margin-block-end: var(--space-6);">
+            Our latest arrivals, from 2000-piece scenic jigsaws to mechanical lock boxes shipped straight from the
+            artisans&rsquo; benches.
+          </p>
+          <ul class="spec-list" style="margin-block-end: var(--space-6); gap: var(--space-3);">
+            <li style="display: flex; align-items: center; gap: var(--space-2);"><i class="ph-fill ph-check-circle"
+                style="color: var(--color-success);"></i> The Grand Canyon 2000pc</li>
+            <li style="display: flex; align-items: center; gap: var(--space-2);"><i class="ph-fill ph-check-circle"
+                style="color: var(--color-success);"></i> Bamboo Secret Box</li>
+            <li style="display: flex; align-items: center; gap: var(--space-2);"><i class="ph-fill ph-check-circle"
+                style="color: var(--color-success);"></i> Acrylic Maze Cube</li>
+          </ul>
+          <a href="products.html" class="btn btn-secondary">Shop New Arrivals</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Join CTA -->
+    <section class="section band-ink" style="text-align: center; overflow: hidden;">
+      <div class="dot-grid"></div>
+      <div class="container reveal" style="max-width: 620px; position: relative; z-index: 1;">
+        <span class="eyebrow"><i class="ph-fill ph-envelope-open"></i> Newsletter</span>
+        <h2 style="margin-block-end: var(--space-4);">Join the PuzzleLab community</h2>
+        <p style="font-size: 1.1rem; margin-block-end: var(--space-6);">Early access to limited-edition brain teasers,
+          plus solving notes on our hardest titles. One email a month, never more.</p>
+        <form style="display: flex; gap: var(--space-2); max-width: 460px; margin-inline: auto; flex-wrap: wrap;"
+          onsubmit="return false;">
+          <input type="email" placeholder="you@example.com" aria-label="Email address" class="form-control"
+            style="flex: 1 1 220px; border-radius: var(--radius-full); padding-inline: var(--space-4); background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18); color: #fff;">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p style="font-size: 0.85rem; margin-block-start: var(--space-3);">No spam, unsubscribe any time.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-block-end: var(--space-3);">
+            <i class="ph-fill ph-puzzle-piece"></i> PuzzleLab
+          </a>
+          <p style="color: var(--color-text-muted); margin-block-end: var(--space-4);">Premium puzzles and brain games
+            for curious minds of all ages.</p>
+          <div class="footer-social" style="display: flex; gap: var(--space-2);">
+            <a href="#" class="icon-btn" style="width: 36px; height: 36px; font-size: 1.2rem;" aria-label="Instagram"><i
+                class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="icon-btn" style="width: 36px; height: 36px; font-size: 1.2rem;" aria-label="Facebook"><i
+                class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="icon-btn" style="width: 36px; height: 36px; font-size: 1.2rem;" aria-label="X"><i
+                class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="products.html">Jigsaw Puzzles</a></li>
+            <li><a href="products.html">Brain Teasers</a></li>
+            <li><a href="products.html">Kids Puzzles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="custom-photo-puzzle.html">Custom Photo Puzzles</a></li>
+            <li><a href="gifting.html">Gifting Bundles</a></li>
+            <li><a href="gifting.html">Corporate Gifts</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Send an Enquiry</a></li>
+            <li style="color: var(--color-text-muted);"><i class="ph ph-envelope-simple"></i>
+              hello@puzzlelab.example.com</li>
+            <li style="color: var(--color-text-muted);"><i class="ph ph-phone"></i> 1-800-PUZZLES</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 PuzzleLab. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <i class="ph-bold ph-arrow-up"></i>
+  </button>
+
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | PuzzleLab</title>
+  <meta name="description"
+    content="Browse our catalog of jigsaw puzzles, brain teasers, and logic games. Filter by difficulty or category.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+
+  <!-- Drawer Overlay -->
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="drawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <i class="ph-fill ph-puzzle-piece"></i> PuzzleLab
+      </div>
+      <button class="icon-btn drawer-close" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <nav class="nav-links drawer-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="products.html" class="nav-link active">Products</a>
+      <a href="custom-photo-puzzle.html" class="nav-link">Custom Photo Puzzle</a>
+      <a href="gifting.html" class="nav-link">Gifting</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-actions drawer-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-puzzle-piece"></i> PuzzleLab
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="custom-photo-puzzle.html" class="nav-link">Custom Photo Puzzle</a>
+        <a href="gifting.html" class="nav-link">Gifting</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary nav-btn">Contact</a>
+        <button class="icon-btn hamburger" aria-label="Open menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="section hero" style="text-align: center; padding-block: var(--space-10);">
+      <div class="hero-glow a"></div>
+      <div class="hero-glow b"></div>
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="section-header">
+          <span class="eyebrow"><i class="ph-fill ph-squares-four"></i> The catalogue</span>
+          <h2>All products</h2>
+          <p>Every title below has been solved end to end by our team before it earned a place here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-block-start: var(--space-8);">
+      <div class="container">
+
+        <!-- Filters -->
+        <div
+          style="background-color: var(--color-surface); border: 1px solid var(--color-border); padding: var(--space-4); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); margin-block-end: var(--space-8);">
+          <div style="display: flex; flex-wrap: wrap; gap: var(--space-6); justify-content: space-between;">
+
+            <div class="filter-group">
+              <strong style="display: block; margin-block-end: var(--space-2);">Category</strong>
+              <div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">
+                <button class="btn btn-outline filter-btn active" style="padding: 9px 18px; font-size: 0.875rem;"
+                  data-category="all">All</button>
+                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
+                  data-category="jigsaw">Jigsaw</button>
+                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
+                  data-category="brain-teaser">Brain Teasers</button>
+                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
+                  data-category="kids">Kids</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <strong style="display: block; margin-block-end: var(--space-2);">Difficulty</strong>
+              <div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">
+                <button class="btn btn-outline filter-btn active" style="padding: 9px 18px; font-size: 0.875rem;"
+                  data-difficulty="all">All</button>
+                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
+                  data-difficulty="easy">Easy</button>
+                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
+                  data-difficulty="medium">Medium</button>
+                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
+                  data-difficulty="hard">Hard</button>
+                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
+                  data-difficulty="expert">Expert</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" style="display: none; text-align: center; padding: var(--space-8);">
+          <i class="ph-duotone ph-magnifying-glass"
+            style="font-size: 4rem; color: var(--color-text-muted); margin-block-end: var(--space-3);"></i>
+          <h3>No puzzles found</h3>
+          <p style="color: var(--color-text-muted);">Try adjusting your filters to find what you're looking for.</p>
+        </div>
+
+        <!-- Product Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-6);"
+          id="productGrid">
+
+          <!-- Product 1 -->
+          <div class="card product-card reveal" data-category="jigsaw" data-difficulty="medium">
+            <img src="assets/images/product-autumn-leaves-jigsaw.jpg" alt="Autumn Leaves Jigsaw"
+              style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
+            <div
+              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-end: var(--space-2);">
+              <span class="badge"
+                style="background: var(--color-secondary-soft); color: var(--color-secondary); border-color: transparent;">Medium</span>
+              <strong style="font-family: var(--font-heading); font-size: 1.2rem;">$24.99</strong>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-block-end: var(--space-1); text-align: start; width: 100%;"> Leaves
+              Jigsaw</h3>
+            <p
+              style="color: var(--color-text-muted); text-align: start; width: 100%; font-size: 0.9rem; margin-block-end: var(--space-4);">
+              1000 Pieces</p>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire Now</a>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="card product-card reveal" data-category="brain-teaser" data-difficulty="hard">
+            <img src="assets/images/product-wooden-knot-puzzle.jpg" alt="Wooden Knot Puzzle"
+              style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
+            <div
+              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-end: var(--space-2);">
+              <span class="badge"
+                style="background: var(--color-primary-soft); color: var(--color-primary); border-color: transparent;">Hard</span>
+              <strong style="font-family: var(--font-heading); font-size: 1.2rem;">$18.50</strong>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-block-end: var(--space-1); text-align: start; width: 100%;">Wooden
+              Knot Puzzle</h3>
+            <p
+              style="color: var(--color-text-muted); text-align: start; width: 100%; font-size: 0.9rem; margin-block-end: var(--space-4);">
+              Solid Bamboo</p>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire Now</a>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="card product-card reveal" data-category="kids" data-difficulty="easy">
+            <img src="assets/images/product-alphabet-animals-kids.jpg" alt="Alphabet Animals"
+              style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
+            <div
+              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-end: var(--space-2);">
+              <span class="badge"
+                style="background: var(--color-secondary-soft); color: var(--color-success); border-color: transparent;">Easy</span>
+              <strong style="font-family: var(--font-heading); font-size: 1.2rem;">$15.00</strong>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-block-end: var(--space-1); text-align: start; width: 100%;">Alphabet
+              Animals</h3>
+            <p
+              style="color: var(--color-text-muted); text-align: start; width: 100%; font-size: 0.9rem; margin-block-end: var(--space-4);">
+              24 Large Pieces</p>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire Now</a>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="card product-card reveal" data-category="brain-teaser" data-difficulty="expert">
+            <img src="assets/images/product-mirror-magic-cube.jpg" alt="Rubik's Style Cube"
+              style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
+            <div
+              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-end: var(--space-2);">
+              <span class="badge"
+                style="background: rgba(107, 78, 158, 0.14); color: var(--color-violet); border-color: transparent;">Expert</span>
+              <strong style="font-family: var(--font-heading); font-size: 1.2rem;">$22.00</strong>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-block-end: var(--space-1); text-align: start; width: 100%;">Mirror
+              Magic Cube</h3>
+            <p
+              style="color: var(--color-text-muted); text-align: start; width: 100%; font-size: 0.9rem; margin-block-end: var(--space-4);">
+              Shape Shifter</p>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire Now</a>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="card product-card reveal" data-category="jigsaw" data-difficulty="hard">
+            <img src="assets/images/product-galaxy-explorer-jigsaw.jpg" alt="Galaxy Explorer"
+              style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
+            <div
+              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-end: var(--space-2);">
+              <span class="badge"
+                style="background: var(--color-primary-soft); color: var(--color-primary); border-color: transparent;">Hard</span>
+              <strong style="font-family: var(--font-heading); font-size: 1.2rem;">$29.99</strong>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-block-end: var(--space-1); text-align: start; width: 100%;">Galaxy
+              Explorer</h3>
+            <p
+              style="color: var(--color-text-muted); text-align: start; width: 100%; font-size: 0.9rem; margin-block-end: var(--space-4);">
+              2000 Pieces</p>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire Now</a>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="card product-card reveal" data-category="brain-teaser" data-difficulty="medium">
+            <img src="assets/images/product-cast-iron-labyrinth.jpg" alt="Cast Iron Labyrinth"
+              style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
+            <div
+              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-end: var(--space-2);">
+              <span class="badge"
+                style="background: var(--color-secondary-soft); color: var(--color-secondary); border-color: transparent;">Medium</span>
+              <strong style="font-family: var(--font-heading); font-size: 1.2rem;">$19.99</strong>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-block-end: var(--space-1); text-align: start; width: 100%;">Cast Iron
+              Labyrinth</h3>
+            <p
+              style="color: var(--color-text-muted); text-align: start; width: 100%; font-size: 0.9rem; margin-block-end: var(--space-4);">
+              Solid Cast Iron</p>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire Now</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Anatomy of a PuzzleLab box -->
+    <section class="section band-soft">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-ruler"></i> Made properly</span>
+          <h2>Anatomy of a PuzzleLab box</h2>
+          <p>The same four standards apply to every product on this page, whether it costs fifteen dollars or eighty.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <div class="media-frame reveal" style="aspect-ratio: 4/3;">
+            <img src="assets/images/anatomy-puzzle-box-materials.jpg"
+              alt="Close-up of puzzle pieces and packaging materials">
+          </div>
+          <div class="story-content reveal">
+          <ul class="spec-list">
+            <li class="spec-item">
+              <span class="icon-tile"><i class="ph-fill ph-stack"></i></span>
+              <div>
+                <h4>2.2mm blueboard core</h4>
+                <p>Recycled Dutch blueboard with a matte linen top sheet. Pieces hold their shape after hundreds of
+                  solves and never delaminate at the tabs.</p>
+              </div>
+            </li>
+            <li class="spec-item">
+              <span class="icon-tile teal"><i class="ph-fill ph-scissors"></i></span>
+              <div>
+                <h4>Steel-rule random cut</h4>
+                <p>No repeated piece shapes across a single puzzle, so a near-fit is never a false positive &mdash;
+                  every click is the right one.</p>
+              </div>
+            </li>
+            <li class="spec-item">
+              <span class="icon-tile gold"><i class="ph-fill ph-drop"></i></span>
+              <div>
+                <h4>Soy-based, low-glare inks</h4>
+                <p>Colour-matched to the original artwork and finished with an anti-glare coat, so long evening sessions
+                  stay easy on the eyes.</p>
+              </div>
+            </li>
+            <li class="spec-item">
+              <span class="icon-tile violet"><i class="ph-fill ph-shield-check"></i></span>
+              <div>
+                <h4>Missing-piece guarantee</h4>
+                <p>Every box is counted by weight and by hand. If a piece is ever missing, we replace the whole puzzle
+                  &mdash; no receipt hunting.</p>
+              </div>
+            </li>
+          </ul>
+          </div>
+        </div>
+
+        <div class="table-wrap reveal" style="margin-block-start: var(--space-8);">
+          <table class="detail-table">
+            <caption class="sr-only"
+              style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Specifications
+              by puzzle range</caption>
+            <thead>
+              <tr>
+                <th scope="col">Range</th>
+                <th scope="col">Pieces</th>
+                <th scope="col">Finished size</th>
+                <th scope="col">Typical solve</th>
+                <th scope="col">Materials</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Range"><strong>Kids</strong></td>
+                <td data-label="Pieces">24 &ndash; 300</td>
+                <td data-label="Finished size">30 &times; 40 cm</td>
+                <td data-label="Typical solve">20 min &ndash; 3 hrs</td>
+                <td data-label="Materials">3mm board, wipe-clean coat</td>
+              </tr>
+              <tr>
+                <td data-label="Range"><strong>Jigsaw</strong></td>
+                <td data-label="Pieces">500 &ndash; 2000</td>
+                <td data-label="Finished size">50 &times; 70 cm</td>
+                <td data-label="Typical solve">2 &ndash; 14 hrs</td>
+                <td data-label="Materials">2.2mm blueboard, linen finish</td>
+              </tr>
+              <tr>
+                <td data-label="Range"><strong>Brain teaser</strong></td>
+                <td data-label="Pieces">4 &ndash; 22 parts</td>
+                <td data-label="Finished size">Handheld</td>
+                <td data-label="Typical solve">20 min &ndash; 4 hrs</td>
+                <td data-label="Materials">Beech, bamboo or cast alloy</td>
+              </tr>
+              <tr>
+                <td data-label="Range"><strong>Puzzle box</strong></td>
+                <td data-label="Pieces">8 &ndash; 14 stages</td>
+                <td data-label="Finished size">18 &times; 12 cm</td>
+                <td data-label="Typical solve">1 &ndash; 5 hrs</td>
+                <td data-label="Materials">Solid birch, brass hardware</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-block-end: var(--space-3);">
+            <i class="ph-fill ph-puzzle-piece"></i> PuzzleLab
+          </a>
+          <p style="color: var(--color-text-muted); margin-block-end: var(--space-4);">Premium puzzles and brain games
+            for curious minds of all ages.</p>
+          <div class="footer-social" style="display: flex; gap: var(--space-2);">
+            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;"
+              aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;" aria-label="Facebook"><i
+                class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;" aria-label="X"><i
+                class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="products.html">Jigsaw Puzzles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="custom-photo-puzzle.html">Custom Photo Puzzles</a></li>
+            <li><a href="gifting.html">Gifting Bundles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Send an Enquiry</a></li>
+            <li style="color: var(--color-text-muted);"><i class="ph ph-envelope-simple"></i>
+              hello@puzzlelab.example.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 PuzzleLab. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <i class="ph-bold ph-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

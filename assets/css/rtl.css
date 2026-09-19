@@ -1,0 +1,24 @@
+/* 
+  RTL Overrides for PuzzleLab
+  Most layout handles RTL automatically via logical CSS properties in style.css
+  (margin-inline, padding-inline, inset-inline-start, etc.)
+  This file handles specific icon flips or complex absolute positioning if needed.
+*/
+
+[dir="rtl"] .ph-arrow-right {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .ph-caret-right {
+  transform: scaleX(-1);
+}
+
+/* Ensure form text inputs are properly aligned in RTL */
+[dir="rtl"] .form-control {
+  text-align: right;
+}
+
+[dir="rtl"] .form-label {
+  text-align: right;
+}
+

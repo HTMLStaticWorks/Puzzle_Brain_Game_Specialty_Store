@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gifting | PuzzleLab</title>
+  <meta name="description"
+    content="Discover curated puzzle bundles, gift vouchers, and add personalized notes for the perfect gift.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+
+  <!-- Drawer Overlay -->
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="drawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <i class="ph-fill ph-puzzle-piece"></i> PuzzleLab
+      </div>
+      <button class="icon-btn drawer-close" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <nav class="nav-links drawer-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="custom-photo-puzzle.html" class="nav-link">Custom Photo Puzzle</a>
+      <a href="gifting.html" class="nav-link active">Gifting</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-actions drawer-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-puzzle-piece"></i> PuzzleLab
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="custom-photo-puzzle.html" class="nav-link">Custom Photo Puzzle</a>
+        <a href="gifting.html" class="nav-link active">Gifting</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary nav-btn">Contact</a>
+        <button class="icon-btn hamburger" aria-label="Open menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="section hero"
+      style="text-align: center; overflow: hidden; padding-block: var(--space-12) var(--space-8);">
+      <div class="hero-glow a"></div>
+      <div class="hero-glow b"></div>
+      <div class="dot-grid"></div>
+      <div class="container" style="max-width: 820px; position: relative; z-index: 2;">
+        <span class="eyebrow"><i class="ph-fill ph-gift"></i> Free wrapping &amp; handwritten notes</span>
+        <h1 style="margin-block-end: var(--space-4);">The perfect gift for <span class="text-grad">curious minds</span>
+        </h1>
+        <p class="lead" style="margin-block-end: var(--space-6); max-inline-size: 56ch; margin-inline: auto;">Birthday,
+          corporate thank-you, or just because &mdash; give something that earns a whole evening of someone&rsquo;s
+          attention.</p>
+        <div style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+          <a href="#bundles" class="btn btn-primary"><i class="ph-fill ph-package"></i> Explore bundles</a>
+          <a href="contact.html?type=voucher" class="btn btn-outline"><i class="ph-fill ph-ticket"></i> Gift
+            vouchers</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Bundles -->
+    <section id="bundles" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-package"></i> Ready to send</span>
+          <h2>Curated gift bundles</h2>
+          <p>Hand-picked combinations for every personality, boxed and wrapped before they leave us.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6);">
+
+          <!-- Bundle 1 -->
+          <div class="card reveal" style="align-items: flex-start; text-align: start;">
+            <img src="assets/images/bundle-family-game-night.jpg" alt="Family Bundle"
+              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
+            <h3 style="margin-block-end: var(--space-2);">The Family Game Night</h3>
+            <p style="color: var(--color-text-muted); margin-block-end: var(--space-4);">Includes a 500-piece nature
+              puzzle, two wooden brain teasers, and a deck of logic cards.</p>
+            <div
+              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-start: auto; padding-block-start: var(--space-4); border-block-start: 1px solid var(--color-border);">
+              <strong style="font-family: var(--font-heading); font-size: 1.25rem;">$65.00</strong>
+              <a href="contact.html?type=gifting" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+
+          <!-- Bundle 2 -->
+          <div class="card reveal" style="align-items: flex-start; text-align: start;">
+            <img src="assets/images/bundle-executive-desk-puzzles.jpg" alt="Executive Bundle"
+              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
+            <h3 style="margin-block-end: var(--space-2);">The Executive Desk</h3>
+            <p style="color: var(--color-text-muted); margin-block-end: var(--space-4);">Premium metal puzzles and a
+              solid walnut puzzle box. Perfect for corporate gifting.</p>
+            <div
+              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-start: auto; padding-block-start: var(--space-4); border-block-start: 1px solid var(--color-border);">
+              <strong style="font-family: var(--font-heading); font-size: 1.25rem;">$85.00</strong>
+              <a href="contact.html?type=gifting" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+
+          <!-- Bundle 3 -->
+          <div class="card reveal" style="align-items: flex-start; text-align: start;">
+            <img src="assets/images/bundle-little-learners-kids.jpg" alt="Kids Bundle"
+              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
+            <h3 style="margin-block-end: var(--space-2);">Little Learners</h3>
+            <p style="color: var(--color-text-muted); margin-block-end: var(--space-4);">Three vibrant, chunky wooden
+              puzzles designed to develop motor skills and logic.</p>
+            <div
+              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-start: auto; padding-block-start: var(--space-4); border-block-start: 1px solid var(--color-border);">
+              <strong style="font-family: var(--font-heading); font-size: 1.25rem;">$45.00</strong>
+              <a href="contact.html?type=gifting" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+
+
+          <!-- Bundle 4 -->
+          <div class="card reveal" style="align-items: flex-start; text-align: start;">
+            <img src="assets/images/bundle-secret-keeper-boxes.jpg" alt="Puzzle Box Bundle"
+              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
+            <h3 style="margin-block-end: var(--space-2);">The Secret Keeper</h3>
+            <p style="color: var(--color-text-muted); margin-block-end: var(--space-4);">Two sequential-discovery puzzle
+              boxes in oak and walnut, with a hidden compartment sized for a gift card.</p>
+            <div
+              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-start: auto; padding-block-start: var(--space-4); border-block-start: 1px solid var(--color-border);">
+              <strong style="font-family: var(--font-heading); font-size: 1.25rem;">$95.00</strong>
+              <a href="contact.html?type=gifting" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+
+          <!-- Bundle 5 -->
+          <div class="card reveal" style="align-items: flex-start; text-align: start;">
+            <img src="assets/images/bundle-slow-weekend-jigsaw.jpg" alt="Weekend Bundle"
+              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
+            <h3 style="margin-block-end: var(--space-2);">The Slow Weekend</h3>
+            <p style="color: var(--color-text-muted); margin-block-end: var(--space-4);">A 2000-piece landscape jigsaw,
+              a felt roll-up mat and a sorting tray set &mdash; everything for a two-day sitting.</p>
+            <div
+              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-start: auto; padding-block-start: var(--space-4); border-block-start: 1px solid var(--color-border);">
+              <strong style="font-family: var(--font-heading); font-size: 1.25rem;">$72.00</strong>
+              <a href="contact.html?type=gifting" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+
+          <!-- Bundle 6 -->
+          <div class="card reveal" style="align-items: flex-start; text-align: start;">
+            <img src="assets/images/bundle-memory-lane-photo.jpg" alt="Custom Photo Bundle"
+              style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
+            <h3 style="margin-block-end: var(--space-2);">The Memory Lane</h3>
+            <p style="color: var(--color-text-muted); margin-block-end: var(--space-4);">A 500-piece custom photo puzzle
+              from an image of your choosing, boxed with a handwritten note card.</p>
+            <div
+              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-start: auto; padding-block-start: var(--space-4); border-block-start: 1px solid var(--color-border);">
+              <strong style="font-family: var(--font-heading); font-size: 1.25rem;">$58.00</strong>
+              <a href="custom-photo-puzzle.html" class="btn btn-outline btn-sm">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Gift Notes & Vouchers -->
+    <section class="section band-soft">
+      <div class="container"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8); align-items: center;">
+
+        <div
+          style="background-color: var(--color-secondary); color: white; padding: var(--space-6); border-radius: var(--radius-lg); text-align: center; position: relative;">
+          <!-- Visual Placeholder for a Gift Card -->
+          <div
+            style="background-color: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0.3); border-radius: var(--radius-md); padding: var(--space-6); margin-block-end: var(--space-4); backdrop-filter: blur(5px);">
+            <i class="ph-fill ph-puzzle-piece" style="font-size: 3rem; margin-block-end: var(--space-2);"></i>
+            <h3 style="color: white; margin-block-end: var(--space-2); font-family: var(--font-heading);">PuzzleLab Gift
+              Card</h3>
+            <p style="font-size: 1.5rem; font-weight: 600;">$50 / $100 / Custom</p>
+          </div>
+          <h3 style="color: white; margin-block-end: var(--space-2);">Digital Gift Vouchers</h3>
+          <p style="color: rgba(255,255,255,0.9); margin-block-end: var(--space-4);">Delivered instantly via email. Let
+            them choose their perfect challenge.</p>
+          <a href="contact.html?type=voucher" class="btn btn-primary"
+            style="background-color: white; color: var(--color-secondary); box-shadow: none;">Enquire Now</a>
+        </div>
+
+        <div>
+          <h2 style="margin-block-end: var(--space-4);">Make it Personal</h2>
+          <p style="margin-block-end: var(--space-4); font-size: 1.1rem; color: var(--color-text-muted);">
+            Every gift bundle or custom puzzle comes with the option to include a handwritten-style printed note.
+          </p>
+          <div
+            style="background-color: var(--color-surface); padding: var(--space-4); border-radius: var(--radius-sm); border-inline-start: 4px solid var(--color-primary); box-shadow: var(--shadow-soft);">
+            <p
+              style="font-family: 'Georgia', serif; font-style: italic; color: var(--color-text); font-size: 1.1rem; line-height: 1.8;">
+              "Dear Sam, thought this 1000-piece galaxy puzzle would keep you busy during the winter! Enjoy the
+              challenge. — Love, Aunt Jane"
+            </p>
+          </div>
+          <p style="margin-block-start: var(--space-4); color: var(--color-text-muted);">Just include your desired
+            message in the enquiry form.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Gifting concierge (static) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-calendar-check"></i> Plan ahead</span>
+          <h2>How gifting works, end to end</h2>
+          <p>From the moment you enquire to the moment it lands on their doorstep &mdash; handled by one person, start
+            to finish.</p>
+        </div>
+
+        <div class="timeline grid-4 reveal" style="--grid-gap: var(--space-5); margin-block-end: var(--space-8);">
+          <div class="timeline-step">
+            <h4>Tell us about them</h4>
+            <p>Age, patience level, and whether they&rsquo;ve ever finished a 1000-piece box. Two sentences is plenty.
+            </p>
+          </div>
+          <div class="timeline-step">
+            <h4>We shortlist three</h4>
+            <p>You get a short reply with three options, honest notes on each, and prices including wrapping.</p>
+          </div>
+          <div class="timeline-step">
+            <h4>Wrapped &amp; noted</h4>
+            <p>Recycled kraft wrap, cotton ribbon and your message printed on heavy card in a handwritten face.</p>
+          </div>
+          <div class="timeline-step">
+            <h4>Sent where you like</h4>
+            <p>Straight to them with no invoice in the box, or to you if you&rsquo;d rather hand it over yourself.</p>
+          </div>
+        </div>
+
+        <div class="grid-3" style="--grid-gap: var(--space-4);">
+          <div class="card reveal" style="align-items: flex-start; text-align: start;">
+            <span class="icon-tile"><i class="ph-fill ph-clock-countdown"></i></span>
+            <h3>Order-by dates</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem;">Standard bundles dispatch within 48 hours.
+              Custom photo puzzles need five working days, and personalised boxes seven.</p>
+          </div>
+          <div class="card reveal" style="align-items: flex-start; text-align: start;">
+            <span class="icon-tile teal"><i class="ph-fill ph-buildings"></i></span>
+            <h3>Corporate orders</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem;">Ten units or more get tiered pricing, a
+              branded belly band and a single consolidated invoice. Bulk shipping to one or many addresses.</p>
+          </div>
+          <div class="card reveal" style="align-items: flex-start; text-align: start;">
+            <span class="icon-tile gold"><i class="ph-fill ph-arrow-u-up-left"></i></span>
+            <h3>Easy exchanges</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem;">If it isn&rsquo;t their kind of challenge,
+              they can swap it for anything of equal value within 30 days &mdash; without telling you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-block-end: var(--space-3);">
+            <i class="ph-fill ph-puzzle-piece"></i> PuzzleLab
+          </a>
+          <p style="color: var(--color-text-muted); margin-block-end: var(--space-4);">Premium puzzles and brain games
+            for curious minds of all ages.</p>
+          <div class="footer-social" style="display: flex; gap: var(--space-2);">
+            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;"
+              aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;" aria-label="Facebook"><i
+                class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;" aria-label="X"><i
+                class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="products.html">Jigsaw Puzzles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="custom-photo-puzzle.html">Custom Photo Puzzles</a></li>
+            <li><a href="gifting.html">Gifting Bundles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Send an Enquiry</a></li>
+            <li style="color: var(--color-text-muted);"><i class="ph ph-envelope-simple"></i>
+              hello@puzzlelab.example.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 PuzzleLab. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <i class="ph-bold ph-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

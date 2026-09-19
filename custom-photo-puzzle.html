@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Photo Puzzle | PuzzleLab</title>
+  <meta name="description"
+    content="Turn your favorite memories into a premium custom photo puzzle. Choose your size and piece count, upload a photo, and create a unique gift.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+
+  <!-- Drawer Overlay -->
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="drawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <i class="ph-fill ph-puzzle-piece"></i> PuzzleLab
+      </div>
+      <button class="icon-btn drawer-close" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <nav class="nav-links drawer-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="custom-photo-puzzle.html" class="nav-link active">Custom Photo Puzzle</a>
+      <a href="gifting.html" class="nav-link">Gifting</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="nav-actions drawer-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-puzzle-piece"></i> PuzzleLab
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="custom-photo-puzzle.html" class="nav-link active">Custom Photo Puzzle</a>
+        <a href="gifting.html" class="nav-link">Gifting</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary nav-btn">Contact</a>
+        <button class="icon-btn hamburger" aria-label="Open menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="section hero" style="text-align: center; overflow: hidden;">
+      <div class="hero-glow a"></div>
+      <div class="hero-glow b"></div>
+      <div class="dot-grid"></div>
+      <div class="container" style="max-width: 800px; position: relative; z-index: 1;">
+        <span class="eyebrow animate-fade-in-up"><i class="ph-fill ph-image-square"></i> Made to order in 5 days</span>
+        <h1 class="animate-fade-in-up" style="margin-block-end: var(--space-4);">Turn memories into <span
+            class="text-grad">masterpieces</span></h1>
+        <p class="lead animate-fade-in-up delay-1"
+          style="margin-block-end: var(--space-6); max-inline-size: 56ch; margin-inline: auto;">Upload a favourite
+          photograph, choose your piece count, and we&rsquo;ll craft a premium jigsaw on the same board we use for our
+          own titles.</p>
+        <div class="animate-fade-in-up delay-2"
+          style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+          <a href="#upload-section" class="btn btn-primary">Start designing <i class="ph ph-arrow-right"></i></a>
+          <a href="#photo-guide" class="btn btn-outline">Photo guide</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-path"></i> The process</span>
+          <h2>How it works</h2>
+          <p>Three steps from a photo on your phone to a boxed puzzle on your table.</p>
+        </div>
+        <div class="timeline reveal">
+          <div class="timeline-step">
+            <span class="timeline-media"><img src="assets/images/step-upload-photo-phone.jpg"
+                alt="Browsing photos on a phone to pick one for printing" loading="lazy"></span>
+            <h4>Upload your photo</h4>
+            <p>Pick a high-resolution image straight from your device &mdash; we&rsquo;ll check it and tell you honestly
+              if it won&rsquo;t hold up.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-media"><img src="assets/images/step-choose-size-boxes.jpg"
+                alt="Puzzle boxes in a range of piece counts" loading="lazy"></span>
+            <h4>Choose your size</h4>
+            <p>From a gentle 100 pieces up to a genuinely punishing 2000, all cut on 2.2mm blueboard.</p>
+          </div>
+          <div class="timeline-step">
+            <span class="timeline-media"><img src="assets/images/step-preview-finished-puzzle.jpg"
+                alt="A finished custom photo puzzle laid out on a table" loading="lazy"></span>
+            <h4>Preview &amp; enquire</h4>
+            <p>Check the live preview, send the enquiry, and a real person confirms your proof before anything is
+              printed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upload & Preview UI -->
+    <section id="upload-section" class="section band-soft">
+      <div class="container"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--space-8);">
+
+        <!-- Controls -->
+        <div
+          style="background-color: var(--color-surface); padding: var(--space-6); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);">
+          <h3 style="margin-block-end: var(--space-6);">Configure Your Puzzle</h3>
+
+          <div class="form-group">
+            <label class="form-label">1. Upload Image (High Res Recommended)</label>
+            <input type="file" id="photoUpload" accept="image/png, image/jpeg" class="form-control"
+              style="padding: var(--space-2);">
+            <!-- Real application would handle this file via an API/backend upload endpoint -->
+          </div>
+
+          <div class="form-group" style="margin-block-start: var(--space-6);">
+            <label class="form-label">2. Select Piece Count & Pricing</label>
+            <select class="form-control" id="pieceCount">
+              <option value="100">100 Pieces - $24.99</option>
+              <option value="500">500 Pieces - $34.99</option>
+              <option value="1000" selected>1000 Pieces - $44.99</option>
+              <option value="2000">2000 Pieces - $59.99</option>
+            </select>
+          </div>
+
+          <div style="margin-block-start: var(--space-8); text-align: center;">
+            <p style="color: var(--color-text-muted); margin-block-end: var(--space-4); font-size: 0.9rem;">Happy with
+              your preview? Proceed to our enquiry form to lock in your custom order.</p>
+            <a href="contact.html?type=custom" class="btn btn-primary" style="width: 100%;">Enquire to Order</a>
+          </div>
+        </div>
+
+        <!-- Preview Mockup -->
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <div
+            style="width: 100%; aspect-ratio: 4/3; background-color: var(--color-bg-alt); border-radius: var(--radius-lg); border: 2px dashed var(--color-border-strong); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+
+            <!-- Placeholder Icon -->
+            <div id="uploadPlaceholder" style="text-align: center; color: var(--color-text-muted);">
+              <i class="ph-duotone ph-image" style="font-size: 4rem; margin-block-end: var(--space-2);"></i>
+              <p>Image Preview</p>
+            </div>
+
+            <!-- Live Preview Element (Populated via JS) -->
+            <img id="photoPreview" src="" alt="Custom Puzzle Preview"
+              style="display: none; width: 100%; height: 100%; object-fit: cover;">
+
+            <!-- CSS Overlay to simulate puzzle pieces -->
+            <div class="puzzle-grid-overlay"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Photo guide (static) -->
+    <section class="section" id="photo-guide">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-camera"></i> Before you upload</span>
+          <h2>What makes a great photo puzzle</h2>
+          <p>A puzzle is only as good as the picture it&rsquo;s cut from. Here is what our print team looks for &mdash;
+            and what quietly ruins a build.</p>
+        </div>
+
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-8); align-items: start;">
+          <div class="reveal">
+            <h3 style="margin-block-end: var(--space-4); display: flex; align-items: center; gap: 10px;">
+              <i class="ph-fill ph-check-circle" style="color: var(--color-success);"></i> Works beautifully
+            </h3>
+            <ul class="spec-list">
+              <li class="spec-item">
+                <span class="icon-tile teal"><i class="ph-fill ph-crop"></i></span>
+                <div>
+                  <h4>3000 px on the long edge</h4>
+                  <p>Roughly a 6-megapixel photo. Anything above this prints crisply at full 50 &times; 70 cm size.</p>
+                </div>
+              </li>
+              <li class="spec-item">
+                <span class="icon-tile teal"><i class="ph-fill ph-palette"></i></span>
+                <div>
+                  <h4>Varied colour and texture</h4>
+                  <p>Different regions give solvers footholds. Portraits, landscapes and busy street scenes all cut
+                    well.</p>
+                </div>
+              </li>
+              <li class="spec-item">
+                <span class="icon-tile teal"><i class="ph-fill ph-sun"></i></span>
+                <div>
+                  <h4>Even, natural light</h4>
+                  <p>Daylight shots keep skin tones and greens accurate once they hit our soy-based inks.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="reveal">
+            <h3 style="margin-block-end: var(--space-4); display: flex; align-items: center; gap: 10px;">
+              <i class="ph-fill ph-warning-circle" style="color: var(--color-error);"></i> Causes trouble
+            </h3>
+            <ul class="spec-list">
+              <li class="spec-item">
+                <span class="icon-tile" style="background: rgba(209, 73, 91, 0.12); color: var(--color-error);"><i
+                    class="ph-fill ph-arrows-out"></i></span>
+                <div>
+                  <h4>Screenshots and app saves</h4>
+                  <p>Messaging apps compress heavily &mdash; fine on a phone, but soft and mushy at poster size.</p>
+                </div>
+              </li>
+              <li class="spec-item">
+                <span class="icon-tile" style="background: rgba(209, 73, 91, 0.12); color: var(--color-error);"><i
+                    class="ph-fill ph-cloud"></i></span>
+                <div>
+                  <h4>Large flat areas</h4>
+                  <p>An empty sky turns into dozens of identical pieces. Charming for experts, miserable for gifts.</p>
+                </div>
+              </li>
+              <li class="spec-item">
+                <span class="icon-tile" style="background: rgba(209, 73, 91, 0.12); color: var(--color-error);"><i
+                    class="ph-fill ph-text-aa"></i></span>
+                <div>
+                  <h4>Text near the edges</h4>
+                  <p>We trim 3mm on every side, so keep names and dates well inside the frame of your photo.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="table-wrap reveal" style="margin-block-start: var(--space-8);">
+          <table class="detail-table">
+            <thead>
+              <tr>
+                <th scope="col">Piece count</th>
+                <th scope="col">Finished size</th>
+                <th scope="col">Minimum resolution</th>
+                <th scope="col">Best for</th>
+                <th scope="col">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Piece count"><strong>100 pieces</strong></td>
+                <td data-label="Finished size">28 &times; 20 cm</td>
+                <td data-label="Minimum resolution">1200 &times; 900 px</td>
+                <td data-label="Best for">Young children, desk gifts</td>
+                <td data-label="Price">$24.99</td>
+              </tr>
+              <tr>
+                <td data-label="Piece count"><strong>500 pieces</strong></td>
+                <td data-label="Finished size">48 &times; 34 cm</td>
+                <td data-label="Minimum resolution">2400 &times; 1700 px</td>
+                <td data-label="Best for">Anniversaries, pet portraits</td>
+                <td data-label="Price">$34.99</td>
+              </tr>
+              <tr>
+                <td data-label="Piece count"><strong>1000 pieces</strong></td>
+                <td data-label="Finished size">66 &times; 48 cm</td>
+                <td data-label="Minimum resolution">3300 &times; 2400 px</td>
+                <td data-label="Best for">Group photos, landscapes</td>
+                <td data-label="Price">$44.99</td>
+              </tr>
+              <tr>
+                <td data-label="Piece count"><strong>2000 pieces</strong></td>
+                <td data-label="Finished size">96 &times; 68 cm</td>
+                <td data-label="Minimum resolution">4800 &times; 3400 px</td>
+                <td data-label="Best for">Wall-sized statement pieces</td>
+                <td data-label="Price">$59.99</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p
+          style="text-align: center; color: var(--color-text-muted); font-size: 0.9rem; margin-block-start: var(--space-4);">
+          Not sure your photo makes the cut? <a href="contact.html?type=custom"
+            style="color: var(--color-primary); font-weight: 600;">Send it to us</a> and we&rsquo;ll check it for free
+          before you order.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-block-end: var(--space-3);">
+            <i class="ph-fill ph-puzzle-piece"></i> PuzzleLab
+          </a>
+          <p style="color: var(--color-text-muted); margin-block-end: var(--space-4);">Premium puzzles and brain games
+            for curious minds of all ages.</p>
+          <div class="footer-social" style="display: flex; gap: var(--space-2);">
+            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;"
+              aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;" aria-label="Facebook"><i
+                class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;" aria-label="X"><i
+                class="ph ph-x-logo"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="products.html">Jigsaw Puzzles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="custom-photo-puzzle.html">Custom Photo Puzzles</a></li>
+            <li><a href="gifting.html">Gifting Bundles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Send an Enquiry</a></li>
+            <li style="color: var(--color-text-muted);"><i class="ph ph-envelope-simple"></i>
+              hello@puzzlelab.example.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 PuzzleLab. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <i class="ph-bold ph-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

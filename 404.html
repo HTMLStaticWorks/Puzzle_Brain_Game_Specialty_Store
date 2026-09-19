@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | PuzzleLab</title>
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-puzzle-piece"></i> PuzzleLab
+      </a>
+      <!-- Minimal nav for 404 -->
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <i class="ph ph-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: var(--space-8);">
+    <div class="container" style="max-width: 600px;">
+      
+      <div style="position: relative; display: inline-block; margin-block-end: var(--space-4);">
+        <h1 style="font-size: clamp(6rem, 15vw, 10rem); line-height: 1; color: var(--color-border-strong);">404</h1>
+        <i class="ph-duotone ph-puzzle-piece" style="font-size: clamp(4rem, 10vw, 6rem); color: var(--color-primary); position: absolute; bottom: 10%; right: 10%; transform: rotate(15deg);"></i>
+      </div>
+      
+      <h2 style="margin-block-end: var(--space-3);">Looks like a piece is missing.</h2>
+      <p style="font-size: 1.25rem; color: var(--color-text-muted); margin-block-end: var(--space-6);">The page you're looking for has been moved or doesn't exist.</p>
+      
+      <a href="index.html" class="btn btn-primary">Back to Home</a>
+      
+    </div>
+  </main>
+
+  <!-- JS (just for theme toggle on 404) -->
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <i class="ph-bold ph-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
