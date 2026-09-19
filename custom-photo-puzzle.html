@@ -36,8 +36,6 @@
       <a href="custom-photo-puzzle.html" class="nav-link active">Custom Photo Puzzle</a>
       <a href="gifting.html" class="nav-link">Gifting</a>
     </nav>
-    <a href="contact.html" class="btn btn-primary drawer-cta">Contact <i class="ph ph-arrow-right"></i></a>
-
     <div class="nav-actions drawer-actions">
       <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
         <i class="ph ph-moon"></i>
@@ -46,6 +44,8 @@
         <i class="ph ph-arrows-left-right"></i>
       </button>
     </div>
+
+    <a href="contact.html" class="btn btn-primary drawer-cta">Contact <i class="ph ph-arrow-right"></i></a>
   </aside>
 
   <!-- Header -->
@@ -148,8 +148,17 @@
 
           <div class="form-group">
             <label class="form-label">1. Upload Image (High Res Recommended)</label>
-            <input type="file" id="photoUpload" accept="image/png, image/jpeg" class="form-control"
-              style="padding: var(--space-2);">
+            <div class="file-field">
+              <input type="file" id="photoUpload" accept="image/png, image/jpeg" class="file-input">
+              <label for="photoUpload" class="file-drop">
+                <i class="ph ph-paperclip-horizontal" aria-hidden="true"></i>
+                <span class="file-drop-main">Attach your photo</span>
+                <span class="file-drop-hint">PNG or JPG &mdash; 2000&nbsp;&times;&nbsp;2000&nbsp;px or larger</span>
+              </label>
+              <p class="file-name" id="photoUploadName" hidden>
+                <i class="ph ph-check-circle" aria-hidden="true"></i><span></span>
+              </p>
+            </div>
             <!-- Real application would handle this file via an API/backend upload endpoint -->
           </div>
 
@@ -172,18 +181,16 @@
 
         <!-- Preview Mockup -->
         <div style="display: flex; align-items: center; justify-content: center;">
-          <div
-            style="width: 100%; aspect-ratio: 4/3; background-color: var(--color-bg-alt); border-radius: var(--radius-lg); border: 2px dashed var(--color-border-strong); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+          <div class="preview-frame">
 
             <!-- Placeholder Icon -->
-            <div id="uploadPlaceholder" style="text-align: center; color: var(--color-text-muted);">
-              <i class="ph-duotone ph-image" style="font-size: 4rem; margin-block-end: var(--space-2);"></i>
+            <div id="uploadPlaceholder" class="preview-placeholder">
+              <i class="ph-duotone ph-image"></i>
               <p>Image Preview</p>
             </div>
 
             <!-- Live Preview Element (Populated via JS) -->
-            <img id="photoPreview" src="" alt="Custom Puzzle Preview"
-              style="display: none; width: 100%; height: 100%; object-fit: cover;">
+            <img id="photoPreview" class="preview-img" src="" alt="Custom Puzzle Preview" style="display: none;">
 
             <!-- CSS Overlay to simulate puzzle pieces -->
             <div class="puzzle-grid-overlay"></div>

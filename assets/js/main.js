@@ -212,18 +212,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const photoPreview = document.getElementById('photoPreview');
   const placeholderIcon = document.getElementById('uploadPlaceholder');
 
+  const photoName = document.getElementById('photoUploadName');
+
   if (photoInput && photoPreview && placeholderIcon) {
     photoInput.addEventListener('change', function(e) {
       if (e.target.files && e.target.files[0]) {
+        const file = e.target.files[0];
         const reader = new FileReader();
-        
+
         reader.onload = function(e) {
           photoPreview.src = e.target.result;
           photoPreview.style.display = 'block';
           placeholderIcon.style.display = 'none';
         }
-        
-        reader.readAsDataURL(e.target.files[0]);
+
+        reader.readAsDataURL(file);
+
+        // Show the chosen file name next to the attach control
+        if (photoName) {
+          photoName.querySelector('span').textContent = file.name;
+          photoName.hidden = false;
+        }
+      } else if (photoName) {
+        photoName.hidden = true;
       }
     });
   }
@@ -532,5 +543,34 @@ document.addEventListener('DOMContentLoaded', () => {
   backToTop.addEventListener('click', () => {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+  });
+});
+
+/* ==================================================
+   FAQ Accordion
+   ================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    if (!question) return;
+
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+
+      // Only one answer stays open at a time
+      faqItems.forEach(other => {
+        other.classList.remove('open');
+        const btn = other.querySelector('.faq-question');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
   });
 });

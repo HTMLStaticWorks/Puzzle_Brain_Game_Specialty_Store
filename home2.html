@@ -54,8 +54,6 @@
       <a href="gifting.html" class="nav-link">Gifting</a>
     </nav>
 
-    <a href="contact.html" class="btn btn-primary drawer-cta">Contact <i class="ph ph-arrow-right"></i></a>
-
     <div class="nav-actions drawer-actions">
       <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
         <i class="ph ph-moon"></i>
@@ -64,6 +62,8 @@
         <i class="ph ph-arrows-left-right"></i>
       </button>
     </div>
+
+    <a href="contact.html" class="btn btn-primary drawer-cta">Contact <i class="ph ph-arrow-right"></i></a>
   </aside>
 
   <!-- Header -->
@@ -388,10 +388,9 @@
         <h2 style="margin-block-end: var(--space-4);">Join the PuzzleLab community</h2>
         <p style="font-size: 1.1rem; margin-block-end: var(--space-6);">Early access to limited-edition brain teasers,
           plus solving notes on our hardest titles. One email a month, never more.</p>
-        <form style="display: flex; gap: var(--space-2); max-width: 460px; margin-inline: auto; flex-wrap: wrap;"
-          onsubmit="return false;">
-          <input type="email" placeholder="you@example.com" aria-label="Email address" class="form-control"
-            style="flex: 1 1 220px; border-radius: var(--radius-full); padding-inline: var(--space-4); background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18); color: #fff;">
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="you@example.com" aria-label="Email address"
+            class="form-control newsletter-input">
           <button type="submit" class="btn btn-primary">Subscribe</button>
         </form>
         <p style="font-size: 0.85rem; margin-block-start: var(--space-3);">No spam, unsubscribe any time.</p>
