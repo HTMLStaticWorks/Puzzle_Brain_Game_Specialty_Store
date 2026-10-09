@@ -3147,18 +3147,3 @@ textarea.form-control { resize: vertical; min-height: 130px; }
   .promise > i { margin-block-end: var(--space-2); }
 }
 
-/* Sale cards: 1 col on mobile, 2 centred cards from 768px */
-.sale-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-4);
-  margin-block-start: var(--space-6);
-}
-
-@media (min-width: 768px) {
-  .sale-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 720px;
-    margin-inline: auto;
-  }
-}
