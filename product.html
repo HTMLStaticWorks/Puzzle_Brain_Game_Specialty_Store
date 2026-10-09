@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The DaVinci Codex Box | PuzzleLab</title>
+  <meta name="description"
+    content="The DaVinci Codex Box: a 14-step sequential-discovery puzzle box in solid birch. Expert difficulty, around 3.5 hours to solve, ages 14 and up.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+
+  <!-- Drawer Overlay -->
+  <div class="drawer-overlay"></div>
+
+  <!-- Mobile Drawer -->
+  <aside class="drawer" aria-label="Mobile menu">
+    <div class="drawer-header">
+      <div class="logo">
+        <img src="assets/images/puzzlelab-logo.svg" alt="PuzzleLab">
+      </div>
+      <button class="icon-btn drawer-close" aria-label="Close menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <nav class="nav-links drawer-links" aria-label="Mobile">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="shop.html" class="nav-link">Shop</a>
+      <a href="custom-photo-puzzle.html" class="nav-link">Custom Puzzle</a>
+      <a href="gifting.html" class="nav-link">Gifting</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-actions drawer-actions">
+      <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+        <i class="ph ph-moon"></i>
+      </button>
+      <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+    </div>
+
+    <a href="shop.html" class="btn btn-primary drawer-cta"><i class="ph-fill ph-puzzle-piece"></i> Shop Puzzles</a>
+  </aside>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html" class="logo">
+        <img src="assets/images/puzzlelab-logo.svg" alt="PuzzleLab">
+      </a>
+
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="custom-photo-puzzle.html" class="nav-link">Custom Puzzle</a>
+        <a href="gifting.html" class="nav-link">Gifting</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="shop.html" class="btn btn-primary nav-btn"><i class="ph-fill ph-puzzle-piece"></i> Shop Puzzles</a>
+        <button class="icon-btn hamburger" aria-label="Open menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Product overview -->
+    <section class="section product-section">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><i class="ph ph-caret-right"></i>
+          <a href="shop.html">Shop</a><i class="ph ph-caret-right"></i>
+          <a href="shop.html?type=puzzle-box#catalogue">Puzzle Boxes</a><i class="ph ph-caret-right"></i>
+          <span aria-current="page">The DaVinci Codex Box</span>
+        </nav>
+
+        <div class="product-layout">
+          <!-- Gallery -->
+          <div class="gallery">
+            <div class="gallery-main">
+              <img id="galleryMain" src="assets/images/challenge-davinci-codex-box.jpg" alt="The DaVinci Codex Box, closed">
+              <span class="badge badge-hot">Best Seller</span>
+            </div>
+            <div class="gallery-thumbs" role="group" aria-label="Product images">
+              <button type="button" class="gallery-thumb active" data-src="assets/images/challenge-davinci-codex-box.jpg" data-alt="The DaVinci Codex Box, closed" aria-label="View image 1">
+                <img src="assets/images/challenge-davinci-codex-box.jpg" alt="">
+              </button>
+              <button type="button" class="gallery-thumb" data-src="assets/images/collection-puzzle-box-mechanism.jpg" data-alt="The hidden sliding mechanism inside the box" aria-label="View image 2">
+                <img src="assets/images/collection-puzzle-box-mechanism.jpg" alt="">
+              </button>
+              <button type="button" class="gallery-thumb" data-src="assets/images/arrival-wooden-puzzle-box.jpg" data-alt="Solid birch panels and dovetail joints" aria-label="View image 3">
+                <img src="assets/images/arrival-wooden-puzzle-box.jpg" alt="">
+              </button>
+              <button type="button" class="gallery-thumb" data-src="assets/images/anatomy-puzzle-box-materials.jpg" data-alt="Materials and packaging" aria-label="View image 4">
+                <img src="assets/images/anatomy-puzzle-box-materials.jpg" alt="">
+              </button>
+            </div>
+          </div>
+
+          <!-- Summary -->
+          <div class="product-summary">
+            <span class="shop-type">Puzzle box &middot; Mechanical</span>
+            <h1>The DaVinci Codex Box</h1>
+            <a href="#reviews" class="rating rating-lg">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i>
+              <strong>4.9</strong> <small>(403 reviews)</small>
+            </a>
+            <p class="product-price">$68.00</p>
+            <p class="product-intro">Fourteen hidden steps in solid birch. Sliding dovetails, a magnetic false floor and
+              no instructions &mdash; just one very satisfying final click when the codex opens.</p>
+
+            <div class="quick-facts">
+              <div>
+                <i class="ph-fill ph-gauge"></i>
+                <span>Difficulty</span>
+                <strong>Expert</strong>
+                <span class="meter" aria-label="Difficulty 4 out of 4"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>
+              </div>
+              <div>
+                <i class="ph-fill ph-clock"></i>
+                <span>Est. completion</span>
+                <strong>~3.5 hours</strong>
+              </div>
+              <div>
+                <i class="ph-fill ph-user"></i>
+                <span>Recommended age</span>
+                <strong>14+</strong>
+              </div>
+              <div>
+                <i class="ph-fill ph-brain"></i>
+                <span>Skills</span>
+                <strong>Logic, patience</strong>
+              </div>
+            </div>
+
+            <div class="btn-row product-actions">
+              <a href="contact.html?type=general" class="btn btn-primary"><i class="ph-fill ph-shopping-bag"></i> Enquire to Order</a>
+              <a href="gifting.html" class="btn btn-outline"><i class="ph-fill ph-gift"></i> Send as a Gift</a>
+            </div>
+
+            <ul class="product-perks">
+              <li><i class="ph ph-truck"></i> Free shipping over $60 &middot; dispatched in 48 hrs</li>
+              <li><i class="ph ph-gift"></i> Free gift wrap &amp; handwritten note</li>
+              <li><i class="ph ph-lifebuoy"></i> Spoiler-free hints by email if you get stuck</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video + details -->
+    <section class="section band-soft">
+      <div class="container product-details">
+        <div class="reveal">
+          <h2 class="h3-like"><i class="ph-fill ph-play-circle"></i> Video demonstration</h2>
+          <div class="video-frame">
+            <!-- Drop the demo clip at assets/video/davinci-codex-demo.mp4 -->
+            <video controls preload="none" poster="assets/images/collection-puzzle-box-mechanism.jpg">
+              <source src="assets/video/davinci-codex-demo.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p class="video-note">A spoiler-free look at the first two steps and the build quality. No solutions shown.</p>
+        </div>
+
+        <div class="reveal">
+          <h2 class="h3-like"><i class="ph-fill ph-ruler"></i> Material specifications</h2>
+          <div class="table-wrap">
+            <table class="spec-table">
+              <tbody>
+                <tr><th scope="row">Body</th><td>Solid Baltic birch, oil &amp; wax finish</td></tr>
+                <tr><th scope="row">Hardware</th><td>Brass pins, rare-earth magnets</td></tr>
+                <tr><th scope="row">Dimensions</th><td>18 &times; 12 &times; 9 cm</td></tr>
+                <tr><th scope="row">Weight</th><td>640 g</td></tr>
+                <tr><th scope="row">Steps to open</th><td>14 sequential moves</td></tr>
+                <tr><th scope="row">Secret compartment</th><td>11 &times; 6 &times; 3 cm</td></tr>
+                <tr><th scope="row">Safety</th><td>Contains small parts &mdash; not for under 3s</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-chat-circle-text"></i> Customer reviews</span>
+          <h2>What solvers say</h2>
+        </div>
+
+        <div class="review-layout">
+          <div class="review-summary reveal">
+            <strong class="review-score">4.9</strong>
+            <div class="rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i></div>
+            <p>Based on 403 reviews</p>
+            <ul class="review-bars">
+              <li><span>5</span><span class="bar"><i style="width: 89%"></i></span><span>89%</span></li>
+              <li><span>4</span><span class="bar"><i style="width: 8%"></i></span><span>8%</span></li>
+              <li><span>3</span><span class="bar"><i style="width: 2%"></i></span><span>2%</span></li>
+              <li><span>2</span><span class="bar"><i style="width: 1%"></i></span><span>1%</span></li>
+              <li><span>1</span><span class="bar"><i style="width: 0%"></i></span><span>0%</span></li>
+            </ul>
+          </div>
+
+          <div class="review-list">
+            <figure class="card review reveal">
+              <div class="rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+              <blockquote>&ldquo;Took me four evenings and I loved every minute. The final step genuinely made me laugh
+                out loud.&rdquo;</blockquote>
+              <figcaption><strong>Daniel K.</strong> &middot; Verified buyer &middot; Solved in 4 hrs</figcaption>
+            </figure>
+            <figure class="card review reveal">
+              <div class="rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+              <blockquote>&ldquo;Bought it as a gift for my dad. Beautiful wood, and he hid my birthday card in the
+                compartment for next year.&rdquo;</blockquote>
+              <figcaption><strong>Amara O.</strong> &middot; Verified buyer &middot; Gift</figcaption>
+            </figure>
+            <figure class="card review reveal">
+              <div class="rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph ph-star"></i></div>
+              <blockquote>&ldquo;Properly hard. I needed one email hint at step nine &mdash; the team replied the same
+                day without spoiling it.&rdquo;</blockquote>
+              <figcaption><strong>Lena M.</strong> &middot; Verified buyer &middot; Solved in 5 hrs</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related -->
+    <section class="section band-soft">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-squares-four"></i> You might also like</span>
+          <h2>More mechanical challenges</h2>
+        </div>
+        <div class="grid-4">
+          <!-- CARDS:related -->
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-walnut-secret-box.jpg" alt="Walnut sequential-discovery puzzle box" loading="lazy">
+              <span class="badge badge-new">New</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~2 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Puzzle box</span>
+                <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(34)</small></span>
+              </div>
+              <h3><a href="product.html">Walnut Secret Box</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-hard">Hard</span></li>
+                <li><i class="ph ph-user"></i> Ages 13+</li>
+                <li><i class="ph ph-puzzle-piece"></i> 8 steps</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$54.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-gearwork-cryptex.jpg" alt="Gearwork Cryptex 3D wooden gear puzzle" loading="lazy">
+              <span class="badge badge-new">New</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~4 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">3D mechanical</span>
+                <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(41)</small></span>
+              </div>
+              <h3><a href="product.html">Gearwork Cryptex</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-hard">Hard</span></li>
+                <li><i class="ph ph-user"></i> Adults</li>
+                <li><i class="ph ph-puzzle-piece"></i> 92 parts</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$46.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-titanium-labyrinth.jpg" alt="Titanium gravity labyrinth puzzle" loading="lazy">
+              <span class="badge badge-hot">Best Seller</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~1.5 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">3D mechanical</span>
+                <span class="rating" aria-label="Rated 4.7 out of 5"><i class="ph-fill ph-star"></i> 4.7 <small>(122)</small></span>
+              </div>
+              <h3><a href="product.html">Titanium Gravity Labyrinth</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-expert">Expert</span></li>
+                <li><i class="ph ph-user"></i> Adults</li>
+                <li><i class="ph ph-puzzle-piece"></i> 1 sphere</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$42.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-wooden-knot.jpg" alt="Bamboo wooden knot brain teaser" loading="lazy">
+              
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~1.5 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Brain teaser</span>
+                <span class="rating" aria-label="Rated 4.7 out of 5"><i class="ph-fill ph-star"></i> 4.7 <small>(188)</small></span>
+              </div>
+              <h3><a href="product.html">Wooden Knot Puzzle</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-hard">Hard</span></li>
+                <li><i class="ph ph-user"></i> Ages 13+</li>
+                <li><i class="ph ph-puzzle-piece"></i> 6 parts</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$18.50</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+          <!-- /CARDS:related -->
+        </div>
+        <div class="btn-row" style="margin-block-start: var(--space-6);">
+          <a href="shop.html" class="btn btn-primary"><i class="ph-fill ph-puzzle-piece"></i> Shop Puzzles</a>
+          <a href="shop.html?type=brain-teaser#catalogue" class="btn btn-outline"><i class="ph-fill ph-brain"></i> Explore Brain Games</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+
+      <!-- Newsletter strip -->
+      <div class="footer-newsletter">
+        <div>
+          <h3>Get the monthly puzzle drop</h3>
+          <p>New arrivals, limited editions and one brain teaser to solve over coffee. One email a month.</p>
+        </div>
+        <form class="newsletter-form footer-newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="you@example.com" aria-label="Email address" class="form-control">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo">
+            <img src="assets/images/puzzlelab-logo.svg" alt="PuzzleLab">
+          </a>
+          <p>A specialty store for jigsaw puzzles, brain teasers, 3D mechanical puzzles and logic games &mdash;
+            every title solved in-house before it reaches the shelf.</p>
+          <div class="footer-social">
+            <a href="#" class="icon-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="shop.html?type=jigsaw#catalogue">Jigsaw Puzzles</a></li>
+            <li><a href="shop.html?type=brain-teaser#catalogue">Brain Teasers</a></li>
+            <li><a href="shop.html?type=mechanical#catalogue">3D Mechanical Puzzles</a></li>
+            <li><a href="shop.html?type=puzzle-box#catalogue">Puzzle Boxes</a></li>
+            <li><a href="shop.html?type=kids#catalogue">Kids Puzzles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html#best-sellers">Best Sellers</a></li>
+            <li><a href="shop.html#new-arrivals">New Arrivals</a></li>
+            <li><a href="shop.html#offers">Sale &amp; Offers</a></li>
+            <li><a href="index.html#finder">Help Me Choose</a></li>
+            <li><a href="gifting.html">Gift Guide</a></li>
+            <li><a href="custom-photo-puzzle.html">Custom Photo Puzzles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#story">Our Story</a></li>
+            <li><a href="about.html#quality">Quality &amp; Safety</a></li>
+            <li><a href="about.html#community">Community</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 PuzzleLab. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <i class="ph-bold ph-arrow-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

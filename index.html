@@ -36,7 +36,7 @@
   <div class="drawer-overlay"></div>
 
   <!-- Mobile Drawer -->
-  <aside class="drawer">
+  <aside class="drawer" aria-label="Mobile menu">
     <div class="drawer-header">
       <div class="logo">
         <img src="assets/images/puzzlelab-logo.svg" alt="PuzzleLab">
@@ -46,12 +46,14 @@
       </button>
     </div>
 
-    <nav class="nav-links drawer-links">
-      <a href="index.html" class="nav-link active">Home</a>
+    <nav class="nav-links drawer-links" aria-label="Mobile">
+      <a href="index.html" class="nav-link active" aria-current="page">Home</a>
       <a href="home2.html" class="nav-link">Home 2</a>
-      <a href="products.html" class="nav-link">Products</a>
-      <a href="custom-photo-puzzle.html" class="nav-link">Custom Photo Puzzle</a>
+      <a href="shop.html" class="nav-link">Shop</a>
+      <a href="custom-photo-puzzle.html" class="nav-link">Custom Puzzle</a>
       <a href="gifting.html" class="nav-link">Gifting</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
     </nav>
 
     <div class="nav-actions drawer-actions">
@@ -63,7 +65,7 @@
       </button>
     </div>
 
-    <a href="contact.html" class="btn btn-primary drawer-cta">Contact <i class="ph ph-arrow-right"></i></a>
+    <a href="shop.html" class="btn btn-primary drawer-cta"><i class="ph-fill ph-puzzle-piece"></i> Shop Puzzles</a>
   </aside>
 
   <!-- Header -->
@@ -73,12 +75,14 @@
         <img src="assets/images/puzzlelab-logo.svg" alt="PuzzleLab">
       </a>
 
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link active">Home</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html" class="nav-link active" aria-current="page">Home</a>
         <a href="home2.html" class="nav-link">Home 2</a>
-        <a href="products.html" class="nav-link">Products</a>
-        <a href="custom-photo-puzzle.html" class="nav-link">Custom Photo Puzzle</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="custom-photo-puzzle.html" class="nav-link">Custom Puzzle</a>
         <a href="gifting.html" class="nav-link">Gifting</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
@@ -88,7 +92,7 @@
         <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
           <i class="ph ph-arrows-left-right"></i>
         </button>
-        <a href="contact.html" class="btn btn-primary nav-btn">Contact</a>
+        <a href="shop.html" class="btn btn-primary nav-btn"><i class="ph-fill ph-puzzle-piece"></i> Shop Puzzles</a>
         <button class="icon-btn hamburger" aria-label="Open menu">
           <i class="ph ph-list"></i>
         </button>
@@ -98,30 +102,40 @@
 
   <main>
     <!-- Hero Section -->
-    <section class="section hero" style="padding-block: var(--space-8) var(--space-12); overflow: hidden;">
+    <section class="section hero home-hero">
       <div class="hero-glow a"></div>
       <div class="hero-glow b"></div>
       <div class="dot-grid"></div>
 
-      <div class="container"
-        style="position: relative; z-index: 1; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-8); align-items: center;">
+      <div class="container home-hero-grid">
         <div class="hero-content animate-fade-in-up">
-          <span class="eyebrow"><i class="ph-fill ph-sparkle"></i> Hand-picked since 2014</span>
-          <h1 style="margin-block-end: var(--space-4);">Find your next <span class="text-grad">&ldquo;aha&rdquo;</span>
-            moment.</h1>
-          <p class="lead" style="margin-block-end: var(--space-6); max-width: 50ch;">
-            A small, obsessively curated collection of premium puzzles and brain games &mdash; chosen for the craft in
-            the box, not the noise on the shelf.
+          <span class="eyebrow"><i class="ph-fill ph-puzzle-piece"></i> Puzzle &amp; Brain Game Specialty Store</span>
+          <h1>Jigsaws, brain teasers &amp; <span class="text-grad">3D puzzles</span> for every kind of thinker</h1>
+          <p class="lead">
+            One specialty store for traditional jigsaws, wooden brain teasers, 3D mechanical puzzles, puzzle boxes and
+            kids&rsquo; games &mdash; every title solved, timed and difficulty-rated by our own team.
           </p>
-          <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
-            <a href="products.html" class="btn btn-primary">Shop the collection <i class="ph ph-arrow-right"></i></a>
-            <a href="#finder" class="btn btn-outline">Find my puzzle</a>
+          <div class="hero-actions">
+            <a href="shop.html" class="btn btn-primary"><i class="ph-fill ph-puzzle-piece"></i> Shop Puzzles</a>
+            <a href="#finder" class="btn btn-outline"><i class="ph-fill ph-magic-wand"></i> Find Your Perfect Puzzle</a>
           </div>
+
+          <nav class="hero-cats" aria-label="Quick links to categories">
+            <a href="shop.html?type=jigsaw#catalogue"><i class="ph-fill ph-puzzle-piece"></i> Jigsaws</a>
+            <a href="shop.html?type=brain-teaser#catalogue"><i class="ph-fill ph-brain"></i> Brain teasers</a>
+            <a href="shop.html?type=mechanical#catalogue"><i class="ph-fill ph-gear-six"></i> 3D mechanical</a>
+            <a href="shop.html?type=puzzle-box#catalogue"><i class="ph-fill ph-lock-key"></i> Puzzle boxes</a>
+            <a href="shop.html?type=kids#catalogue"><i class="ph-fill ph-baby"></i> Kids</a>
+          </nav>
 
           <div class="stat-row">
             <div>
               <span class="stat-num">120+</span>
               <span class="stat-label">Curated titles</span>
+            </div>
+            <div>
+              <span class="stat-num">5</span>
+              <span class="stat-label">Puzzle families</span>
             </div>
             <div>
               <span class="stat-num">4.9<span style="font-size: 1rem; color: var(--color-text-muted);">/5</span></span>
@@ -130,12 +144,20 @@
           </div>
         </div>
 
-        <div class="hero-visual animate-fade-in-up delay-2" style="position: relative;">
-          <div class="media-frame" style="aspect-ratio: 4/5;">
-            <img src="assets/images/hero-family-puzzle-table.jpg"
-              alt="A family working together on a jigsaw puzzle at a table">
-          </div>
-
+        <div class="hero-collage animate-fade-in-up delay-2">
+          <a href="shop.html?type=jigsaw#catalogue" class="collage-item collage-a">
+            <img src="assets/images/hero-brain-training-bg.jpg" alt="A mountain jigsaw puzzle being assembled on a table">
+            <span class="collage-label"><i class="ph-fill ph-puzzle-piece"></i> Jigsaw puzzles</span>
+          </a>
+          <a href="shop.html?type=mechanical#catalogue" class="collage-item collage-b">
+            <img src="assets/images/feature-person-focused-logic-puzzle.jpg" alt="Hands solving a 3D wooden gear puzzle">
+            <span class="collage-label"><i class="ph-fill ph-gear-six"></i> 3D mechanical</span>
+          </a>
+          <a href="shop.html?type=brain-teaser#catalogue" class="collage-item collage-c">
+            <img src="assets/images/collection-wooden-brain-teaser.jpg" alt="An interlocking wooden brain teaser">
+            <span class="collage-label"><i class="ph-fill ph-brain"></i> Brain teasers</span>
+          </a>
+          <div class="float-chip collage-chip"><i class="ph-fill ph-seal-check"></i> Solved in-house</div>
         </div>
       </div>
     </section>
@@ -144,10 +166,10 @@
     <section class="section" id="finder">
       <div class="container">
         <div class="section-header reveal">
-          <span class="eyebrow"><i class="ph-fill ph-cursor-click"></i> Interactive</span>
-          <h2>Find your perfect puzzle in three taps</h2>
-          <p>Tell us who is solving, how long you have, and the mood you are after. Your match updates live &mdash; no
-            form, no email, no waiting.</p>
+          <span class="eyebrow"><i class="ph-fill ph-magic-wand"></i> Help Me Choose</span>
+          <h2>Find Your Perfect Puzzle in four taps</h2>
+          <p>Tell us who is solving, how much time you have, their experience level and whether it&rsquo;s a gift.
+            Your match updates live &mdash; no form, no email, no waiting.</p>
         </div>
 
         <div class="finder reveal" id="puzzleFinder">
@@ -175,12 +197,22 @@
             </div>
 
             <div class="finder-step">
-              <div class="finder-step-label"><span class="num">3</span> What mood?</div>
-              <div class="chip-row" role="group" aria-label="What mood">
+              <div class="finder-step-label"><span class="num">3</span> Experience level?</div>
+              <div class="chip-row" role="group" aria-label="Experience level">
                 <button type="button" class="chip active" data-group="vibe" data-value="calm" aria-pressed="true"><i
-                    class="ph-fill ph-leaf"></i> Calm &amp; meditative</button>
+                    class="ph-fill ph-leaf"></i> New &amp; relaxed</button>
                 <button type="button" class="chip" data-group="vibe" data-value="intense" aria-pressed="false"><i
-                    class="ph-fill ph-fire"></i> Properly difficult</button>
+                    class="ph-fill ph-fire"></i> Seasoned &mdash; make it hard</button>
+              </div>
+            </div>
+
+            <div class="finder-step">
+              <div class="finder-step-label"><span class="num">4</span> Is it a gift?</div>
+              <div class="chip-row" role="group" aria-label="Is it a gift">
+                <button type="button" class="chip active" data-group="gift" data-value="no" aria-pressed="true"><i
+                    class="ph-fill ph-house"></i> It&rsquo;s for us</button>
+                <button type="button" class="chip" data-group="gift" data-value="yes" aria-pressed="false"><i
+                    class="ph-fill ph-gift"></i> Yes, a gift</button>
               </div>
             </div>
 
@@ -204,7 +236,7 @@
         </div>
         <div class="grid-4 grid-4-wide">
 
-          <a href="products.html" class="card collection-card reveal">
+          <a href="shop.html?type=jigsaw#catalogue" class="card collection-card reveal">
             <span class="card-media"><img src="assets/images/collection-jigsaw-pieces-table.jpg"
                 alt="Jigsaw puzzle pieces spread across a table" loading="lazy"></span>
             <span class="icon-tile"><i class="ph-fill ph-puzzle-piece"></i></span>
@@ -214,7 +246,7 @@
             <span class="card-cta">Browse <i class="ph-bold ph-arrow-right"></i></span>
           </a>
 
-          <a href="products.html" class="card collection-card reveal">
+          <a href="shop.html?type=brain-teaser#catalogue" class="card collection-card reveal">
             <span class="card-media"><img src="assets/images/collection-wooden-brain-teaser.jpg"
                 alt="A wooden brain teaser puzzle" loading="lazy"></span>
             <span class="icon-tile teal"><i class="ph-fill ph-cube"></i></span>
@@ -224,7 +256,7 @@
             <span class="card-cta">Browse <i class="ph-bold ph-arrow-right"></i></span>
           </a>
 
-          <a href="products.html" class="card collection-card reveal">
+          <a href="shop.html?type=kids#catalogue" class="card collection-card reveal">
             <span class="card-media"><img src="assets/images/collection-kids-chunky-puzzle.jpg"
                 alt="A child playing with chunky wooden puzzle pieces" loading="lazy"></span>
             <span class="icon-tile gold"><i class="ph-fill ph-baby"></i></span>
@@ -234,7 +266,7 @@
             <span class="card-cta">Browse <i class="ph-bold ph-arrow-right"></i></span>
           </a>
 
-          <a href="products.html" class="card collection-card reveal">
+          <a href="shop.html?type=puzzle-box#catalogue" class="card collection-card reveal">
             <span class="card-media"><img src="assets/images/collection-puzzle-box-mechanism.jpg"
                 alt="A wooden puzzle box with a hidden mechanism" loading="lazy"></span>
             <span class="icon-tile violet"><i class="ph-fill ph-lock-key"></i></span>
@@ -248,8 +280,122 @@
       </div>
     </section>
 
+    <!-- Best Sellers -->
+    <section class="section" id="best-sellers">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-trophy"></i> Best sellers</span>
+          <h2>Our most-loved puzzles right now</h2>
+          <p>Compare difficulty, solve time and age at a glance &mdash; then dive into the details.</p>
+        </div>
+        <div class="grid-4">
+          <!-- CARDS:best -->
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-davinci-codex.jpg" alt="The DaVinci Codex wooden puzzle box" loading="lazy">
+              <span class="badge badge-hot">Best Seller</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~3.5 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Puzzle box</span>
+                <span class="rating" aria-label="Rated 4.9 out of 5"><i class="ph-fill ph-star"></i> 4.9 <small>(403)</small></span>
+              </div>
+              <h3><a href="product.html">The DaVinci Codex Box</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-expert">Expert</span></li>
+                <li><i class="ph ph-user"></i> Adults</li>
+                <li><i class="ph ph-puzzle-piece"></i> 14 steps</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$68.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-autumn-leaves.jpg" alt="Autumn Leaves jigsaw puzzle" loading="lazy">
+              <span class="badge badge-hot">Best Seller</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~6 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Jigsaw</span>
+                <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(312)</small></span>
+              </div>
+              <h3><a href="product.html">Autumn Leaves 1000pc</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-medium">Medium</span></li>
+                <li><i class="ph ph-user"></i> Adults</li>
+                <li><i class="ph ph-puzzle-piece"></i> 1000 pcs</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$24.99</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-titanium-labyrinth.jpg" alt="Titanium gravity labyrinth puzzle" loading="lazy">
+              <span class="badge badge-hot">Best Seller</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~1.5 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">3D mechanical</span>
+                <span class="rating" aria-label="Rated 4.7 out of 5"><i class="ph-fill ph-star"></i> 4.7 <small>(122)</small></span>
+              </div>
+              <h3><a href="product.html">Titanium Gravity Labyrinth</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-expert">Expert</span></li>
+                <li><i class="ph ph-user"></i> Adults</li>
+                <li><i class="ph ph-puzzle-piece"></i> 1 sphere</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$42.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-alphabet-animals.jpg" alt="Alphabet Animals chunky kids puzzle" loading="lazy">
+              <span class="badge badge-hot">Best Seller</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~20 min</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Kids</span>
+                <span class="rating" aria-label="Rated 4.9 out of 5"><i class="ph-fill ph-star"></i> 4.9 <small>(264)</small></span>
+              </div>
+              <h3><a href="product.html">Alphabet Animals</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-easy">Easy</span></li>
+                <li><i class="ph ph-user"></i> Ages 3–6</li>
+                <li><i class="ph ph-puzzle-piece"></i> 24 pcs</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$15.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+          <!-- /CARDS:best -->
+        </div>
+        <div class="btn-row" style="margin-block-start: var(--space-6);">
+          <a href="shop.html#best-sellers" class="btn btn-primary"><i class="ph-fill ph-trophy"></i> Explore Best Sellers</a>
+          <a href="shop.html?type=brain-teaser#catalogue" class="btn btn-outline"><i class="ph-fill ph-brain"></i> Explore Brain Games</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Brand Story -->
-    <section class="section">
+    <section class="section band-soft">
       <div class="container story-grid">
         <div class="media-frame reveal" style="aspect-ratio: 5/4;">
           <img src="assets/images/story-puzzle-piece-closeup.jpg" alt="Close-up of a wooden puzzle piece">
@@ -277,7 +423,7 @@
               </div>
             </li>
           </ul>
-          <a href="products.html" class="btn btn-outline">See the catalogue <i class="ph ph-arrow-right"></i></a>
+          <a href="shop.html" class="btn btn-outline">See the catalogue <i class="ph ph-arrow-right"></i></a>
         </div>
       </div>
     </section>
@@ -292,7 +438,7 @@
         </div>
 
         <div class="grid-4" style="--grid-gap: var(--space-3);">
-          <a href="products.html" class="reveal"
+          <a href="shop.html" class="reveal"
             style="display: block; padding: var(--space-5); border-radius: var(--radius-lg); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); transition: all var(--transition-fast);">
             <div style="display: flex; gap: 4px; color: var(--color-accent); margin-block-end: var(--space-3);">
               <i class="ph-fill ph-star"></i><i class="ph ph-star"></i><i class="ph ph-star"></i>
@@ -300,7 +446,7 @@
             <h3 style="color: #fff; margin-block-end: 4px;">Easy</h3>
             <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">Under 2 hours &middot; 100&ndash;500 pieces</p>
           </a>
-          <a href="products.html" class="reveal"
+          <a href="shop.html" class="reveal"
             style="display: block; padding: var(--space-5); border-radius: var(--radius-lg); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); transition: all var(--transition-fast);">
             <div style="display: flex; gap: 4px; color: var(--color-accent); margin-block-end: var(--space-3);">
               <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph ph-star"></i>
@@ -308,7 +454,7 @@
             <h3 style="color: #fff; margin-block-end: 4px;">Medium</h3>
             <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">An evening &middot; 500&ndash;1000 pieces</p>
           </a>
-          <a href="products.html" class="reveal"
+          <a href="shop.html" class="reveal"
             style="display: block; padding: var(--space-5); border-radius: var(--radius-lg); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); transition: all var(--transition-fast);">
             <div style="display: flex; gap: 4px; color: var(--color-accent); margin-block-end: var(--space-3);">
               <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
@@ -317,7 +463,7 @@
             <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">A full weekend &middot; 1000&ndash;2000 pieces
             </p>
           </a>
-          <a href="products.html" class="reveal"
+          <a href="shop.html" class="reveal"
             style="display: block; padding: var(--space-5); border-radius: var(--radius-lg); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); transition: all var(--transition-fast);">
             <div style="display: flex; gap: 4px; color: var(--color-primary); margin-block-end: var(--space-3);">
               <i class="ph-fill ph-fire"></i><i class="ph-fill ph-fire"></i><i class="ph-fill ph-fire"></i>
@@ -362,7 +508,7 @@
               Curated bundles, handwritten notes and open-ended vouchers for the puzzler who already owns everything.
             </p>
             <a href="gifting.html" class="btn btn-outline btn-sm"
-              style="margin-block-start: auto; align-self: center;">Explore gifts <i class="ph ph-arrow-right"></i></a>
+              style="margin-block-start: auto; align-self: center;"><i class="ph-fill ph-gift"></i> Shop Gifts</a>
           </div>
         </div>
 
@@ -419,19 +565,17 @@
     </section>
 
     <!-- CTA Band -->
-    <section class="section" style="padding-block: var(--space-8);">
+    <section class="section cta-section">
       <div class="container reveal">
-        <div
-          style="background: var(--grad-primary); border-radius: var(--radius-xl); padding: var(--space-8) var(--space-6); text-align: center; position: relative; overflow: hidden; box-shadow: var(--shadow-hover);">
+        <div class="cta-band">
           <div class="puzzle-grid-overlay"></div>
-          <div style="position: relative; z-index: 1; max-width: 620px; margin-inline: auto;">
-            <h2 style="color: #fff; margin-block-end: var(--space-3);">Ready to unplug and play?</h2>
-            <p style="color: rgba(255,255,255,0.88); margin-block-end: var(--space-6); font-size: 1.1rem;">Browse the
-              full catalogue, or let us pick something for you &mdash; we answer every enquiry personally.</p>
-            <div style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
-              <a href="products.html" class="btn btn-light">Browse catalogue</a>
-
-
+          <div class="cta-band-inner">
+            <h2>Ready to unplug and play?</h2>
+            <p>Browse the full shop, dive into brain games, or start with the titles our customers love most.</p>
+            <div class="btn-row">
+              <a href="shop.html" class="btn btn-light"><i class="ph-fill ph-puzzle-piece"></i> Shop Puzzles</a>
+              <a href="shop.html?type=brain-teaser#catalogue" class="btn btn-ghost-light"><i class="ph-fill ph-brain"></i> Explore Brain Games</a>
+              <a href="shop.html#best-sellers" class="btn btn-ghost-light"><i class="ph-fill ph-trophy"></i> Shop Best Sellers</a>
             </div>
           </div>
         </div>
@@ -442,49 +586,68 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
+
+      <!-- Newsletter strip -->
+      <div class="footer-newsletter">
+        <div>
+          <h3>Get the monthly puzzle drop</h3>
+          <p>New arrivals, limited editions and one brain teaser to solve over coffee. One email a month.</p>
+        </div>
+        <form class="newsletter-form footer-newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="you@example.com" aria-label="Email address" class="form-control">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+
       <div class="footer-grid">
-        <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-block-end: var(--space-3);">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo">
             <img src="assets/images/puzzlelab-logo.svg" alt="PuzzleLab">
           </a>
-          <p style="color: var(--color-text-muted); margin-block-end: var(--space-4); font-size: 0.95rem;">Premium
-            puzzles and brain games for curious minds of all ages.</p>
-          <div class="footer-social" style="display: flex; gap: var(--space-2);">
-            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;"
-              aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;" aria-label="Facebook"><i
-                class="ph ph-facebook-logo"></i></a>
-            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;" aria-label="X"><i
-                class="ph ph-x-logo"></i></a>
+          <p>A specialty store for jigsaw puzzles, brain teasers, 3D mechanical puzzles and logic games &mdash;
+            every title solved in-house before it reaches the shelf.</p>
+          <div class="footer-social">
+            <a href="#" class="icon-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
           </div>
         </div>
 
         <div class="footer-col">
           <h4>Shop</h4>
           <ul class="footer-links">
-            <li><a href="products.html">All Products</a></li>
-            <li><a href="products.html">Jigsaw Puzzles</a></li>
-            <li><a href="products.html">Brain Teasers</a></li>
-            <li><a href="products.html">Kids Puzzles</a></li>
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="shop.html?type=jigsaw#catalogue">Jigsaw Puzzles</a></li>
+            <li><a href="shop.html?type=brain-teaser#catalogue">Brain Teasers</a></li>
+            <li><a href="shop.html?type=mechanical#catalogue">3D Mechanical Puzzles</a></li>
+            <li><a href="shop.html?type=puzzle-box#catalogue">Puzzle Boxes</a></li>
+            <li><a href="shop.html?type=kids#catalogue">Kids Puzzles</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4>Discover</h4>
           <ul class="footer-links">
+            <li><a href="shop.html#best-sellers">Best Sellers</a></li>
+            <li><a href="shop.html#new-arrivals">New Arrivals</a></li>
+            <li><a href="shop.html#offers">Sale &amp; Offers</a></li>
+            <li><a href="index.html#finder">Help Me Choose</a></li>
+            <li><a href="gifting.html">Gift Guide</a></li>
             <li><a href="custom-photo-puzzle.html">Custom Photo Puzzles</a></li>
-            <li><a href="gifting.html">Gifting Bundles</a></li>
-            <li><a href="gifting.html">Corporate Gifts</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Contact Us</h4>
+          <h4>Company</h4>
           <ul class="footer-links">
-            <li><a href="contact.html">Send an Enquiry</a></li>
-            <li style="color: var(--color-text-muted);"><i class="ph ph-envelope-simple"></i>
-              hello@puzzlelab.example.com</li>
-            <li style="color: var(--color-text-muted);"><i class="ph ph-phone"></i> 1-800-PUZZLES</li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#story">Our Story</a></li>
+            <li><a href="about.html#quality">Quality &amp; Safety</a></li>
+            <li><a href="about.html#community">Community</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
       </div>

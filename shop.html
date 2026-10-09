@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | PuzzleLab</title>
+  <title>Shop Puzzles &amp; Brain Games | PuzzleLab</title>
   <meta name="description"
-    content="Browse our catalog of jigsaw puzzles, brain teasers, and logic games. Filter by difficulty or category.">
+    content="Shop jigsaw puzzles, brain teasers, 3D mechanical wooden puzzles, puzzle boxes and kids puzzles. Filter by age, difficulty, skill, price, piece count and puzzle type.">
 
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -20,7 +20,7 @@
   <div class="drawer-overlay"></div>
 
   <!-- Mobile Drawer -->
-  <aside class="drawer">
+  <aside class="drawer" aria-label="Mobile menu">
     <div class="drawer-header">
       <div class="logo">
         <img src="assets/images/puzzlelab-logo.svg" alt="PuzzleLab">
@@ -29,13 +29,17 @@
         <i class="ph ph-x"></i>
       </button>
     </div>
-    <nav class="nav-links drawer-links">
+
+    <nav class="nav-links drawer-links" aria-label="Mobile">
       <a href="index.html" class="nav-link">Home</a>
       <a href="home2.html" class="nav-link">Home 2</a>
-      <a href="products.html" class="nav-link active">Products</a>
-      <a href="custom-photo-puzzle.html" class="nav-link">Custom Photo Puzzle</a>
+      <a href="shop.html" class="nav-link active" aria-current="page">Shop</a>
+      <a href="custom-photo-puzzle.html" class="nav-link">Custom Puzzle</a>
       <a href="gifting.html" class="nav-link">Gifting</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
     </nav>
+
     <div class="nav-actions drawer-actions">
       <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
         <i class="ph ph-moon"></i>
@@ -45,7 +49,7 @@
       </button>
     </div>
 
-    <a href="contact.html" class="btn btn-primary drawer-cta">Contact <i class="ph ph-arrow-right"></i></a>
+    <a href="shop.html" class="btn btn-primary drawer-cta"><i class="ph-fill ph-puzzle-piece"></i> Shop Puzzles</a>
   </aside>
 
   <!-- Header -->
@@ -54,13 +58,17 @@
       <a href="index.html" class="logo">
         <img src="assets/images/puzzlelab-logo.svg" alt="PuzzleLab">
       </a>
-      <nav class="nav-links">
+
+      <nav class="nav-links" aria-label="Main">
         <a href="index.html" class="nav-link">Home</a>
         <a href="home2.html" class="nav-link">Home 2</a>
-        <a href="products.html" class="nav-link active">Products</a>
-        <a href="custom-photo-puzzle.html" class="nav-link">Custom Photo Puzzle</a>
+        <a href="shop.html" class="nav-link active" aria-current="page">Shop</a>
+        <a href="custom-photo-puzzle.html" class="nav-link">Custom Puzzle</a>
         <a href="gifting.html" class="nav-link">Gifting</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
+
       <div class="nav-actions">
         <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
           <i class="ph ph-moon"></i>
@@ -68,7 +76,7 @@
         <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
           <i class="ph ph-arrows-left-right"></i>
         </button>
-        <a href="contact.html" class="btn btn-primary nav-btn">Contact</a>
+        <a href="shop.html" class="btn btn-primary nav-btn"><i class="ph-fill ph-puzzle-piece"></i> Shop Puzzles</a>
         <button class="icon-btn hamburger" aria-label="Open menu">
           <i class="ph ph-list"></i>
         </button>
@@ -78,252 +86,910 @@
 
   <main>
     <!-- Hero -->
-    <section class="section hero" style="text-align: center; overflow: hidden; padding-block: var(--space-12) var(--space-8);">
+    <section class="section hero page-hero">
       <div class="hero-glow a"></div>
       <div class="hero-glow b"></div>
       <div class="dot-grid"></div>
-      <div class="container" style="max-width: 820px; position: relative; z-index: 2;">
-        <span class="eyebrow animate-fade-in-up"><i class="ph-fill ph-squares-four"></i> Solved in-house before it ships</span>
-        <h1 class="animate-fade-in-up" style="margin-block-end: var(--space-4);">Every puzzle worth <span class="text-grad">your evening</span></h1>
-        <p class="lead animate-fade-in-up delay-1" style="margin-block-end: var(--space-6); max-inline-size: 56ch; margin-inline: auto;">
-          Browse the full catalogue by category and difficulty &mdash; every title below has been solved end to end by our team before it earned a place here.
+      <div class="container page-hero-inner">
+        <span class="eyebrow animate-fade-in-up"><i class="ph-fill ph-storefront"></i> The PuzzleLab shop</span>
+        <h1 class="animate-fade-in-up">Shop puzzles &amp; <span class="text-grad">brain games</span></h1>
+        <p class="lead animate-fade-in-up delay-1">
+          Jigsaws, brain teasers, 3D mechanical puzzles and puzzle boxes &mdash; every title rated by our own solve
+          times so you can compare difficulty and know exactly how long it will take.
         </p>
-        <div class="animate-fade-in-up delay-2" style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
-          <a href="#catalogue" class="btn btn-primary">Browse the catalogue <i class="ph ph-arrow-right"></i></a>
-          <a href="custom-photo-puzzle.html" class="btn btn-outline"><i class="ph-fill ph-image-square"></i> Make your own</a>
+        <div class="btn-row animate-fade-in-up delay-2">
+          <a href="#catalogue" class="btn btn-primary"><i class="ph-fill ph-puzzle-piece"></i> Shop Puzzles</a>
+          <a href="#best-sellers" class="btn btn-outline"><i class="ph-fill ph-trophy"></i> Shop Best Sellers</a>
         </div>
-      </div>
 
-      <i class="ph-fill ph-squares-four animate-float hero-float"
-        style="position: absolute; top: 16%; left: 7%; font-size: 3.5rem; color: var(--color-primary-soft); z-index: 1;"></i>
-      <i class="ph-fill ph-puzzle-piece animate-float hero-float"
-        style="position: absolute; bottom: 16%; right: 8%; font-size: 4.25rem; color: var(--color-secondary-soft); animation-delay: -3.5s; z-index: 1;"></i>
+        <nav class="jump-links animate-fade-in-up delay-3" aria-label="Shop sections">
+          <a href="#categories">Categories</a>
+          <a href="#featured">Featured</a>
+          <a href="#catalogue">All puzzles</a>
+          <a href="#best-sellers">Best sellers</a>
+          <a href="#new-arrivals">New arrivals</a>
+          <a href="#offers">Sale &amp; offers</a>
+        </nav>
+      </div>
     </section>
 
-    <section id="catalogue" class="section band-soft" style="padding-block-start: var(--space-8);">
+    <!-- Categories -->
+    <section id="categories" class="section band-soft">
       <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-squares-four"></i> Product categories</span>
+          <h2>Shop by puzzle type</h2>
+          <p>Five families of puzzling, each with its own rhythm. Pick one to jump straight into the filtered
+            catalogue.</p>
+        </div>
 
-        <!-- Filters -->
-        <div
-          style="background-color: var(--color-surface); border: 1px solid var(--color-border); padding: var(--space-4); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); margin-block-end: var(--space-8);">
-          <div style="display: flex; flex-wrap: wrap; gap: var(--space-6); justify-content: space-between;">
+        <div class="cat-grid">
+          <a href="shop.html?type=jigsaw#catalogue" class="cat-tile reveal">
+            <img src="assets/images/collection-jigsaw-pieces-table.jpg" alt="Jigsaw pieces spread across a table" loading="lazy">
+            <span class="cat-tile-body">
+              <strong>Jigsaw Puzzles</strong>
+              <small>500 &ndash; 2000 pieces</small>
+            </span>
+          </a>
+          <a href="shop.html?type=brain-teaser#catalogue" class="cat-tile reveal">
+            <img src="assets/images/product-wooden-knot-puzzle.jpg" alt="A wooden knot brain teaser" loading="lazy">
+            <span class="cat-tile-body">
+              <strong>Brain Teasers</strong>
+              <small>Wood &amp; metal disentanglements</small>
+            </span>
+          </a>
+          <a href="shop.html?type=mechanical#catalogue" class="cat-tile reveal">
+            <img src="assets/images/feature-person-focused-logic-puzzle.jpg" alt="A 3D wooden gear puzzle being solved" loading="lazy">
+            <span class="cat-tile-body">
+              <strong>3D Mechanical</strong>
+              <small>Wooden gears, burrs &amp; cubes</small>
+            </span>
+          </a>
+          <a href="shop.html?type=puzzle-box#catalogue" class="cat-tile reveal">
+            <img src="assets/images/collection-puzzle-box-mechanism.jpg" alt="A wooden puzzle box with a hidden mechanism" loading="lazy">
+            <span class="cat-tile-body">
+              <strong>Puzzle Boxes</strong>
+              <small>Sequential discovery</small>
+            </span>
+          </a>
+          <a href="shop.html?type=kids#catalogue" class="cat-tile reveal">
+            <img src="assets/images/collection-kids-chunky-puzzle.jpg" alt="A child playing with chunky puzzle pieces" loading="lazy">
+            <span class="cat-tile-body">
+              <strong>Kids Puzzles</strong>
+              <small>Ages 3 &ndash; 12</small>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-            <div class="filter-group">
-              <strong style="display: block; margin-block-end: var(--space-2);">Category</strong>
-              <div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">
-                <button class="btn btn-outline filter-btn active" style="padding: 9px 18px; font-size: 0.875rem;"
-                  data-category="all">All</button>
-                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
-                  data-category="jigsaw">Jigsaw</button>
-                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
-                  data-category="brain-teaser">Brain Teasers</button>
-                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
-                  data-category="kids">Kids</button>
+    <!-- Featured -->
+    <section id="featured" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-star"></i> Featured products</span>
+          <h2>This month&rsquo;s staff picks</h2>
+          <p>The three titles our team keeps reaching for &mdash; one jigsaw, one mechanical build and one pocket-sized
+            teaser.</p>
+        </div>
+        <div class="grid-3" style="--grid-gap: var(--space-4);">
+          <!-- CARDS:featured -->
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-galaxy-explorer.jpg" alt="Galaxy Explorer jigsaw puzzle" loading="lazy">
+              
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~14 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Jigsaw</span>
+                <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(97)</small></span>
+              </div>
+              <h3><a href="product.html">Galaxy Explorer 2000pc</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-hard">Hard</span></li>
+                <li><i class="ph ph-user"></i> Adults</li>
+                <li><i class="ph ph-puzzle-piece"></i> 2000 pcs</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$29.99</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
               </div>
             </div>
+          </article>
 
-            <div class="filter-group">
-              <strong style="display: block; margin-block-end: var(--space-2);">Difficulty</strong>
-              <div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">
-                <button class="btn btn-outline filter-btn active" style="padding: 9px 18px; font-size: 0.875rem;"
-                  data-difficulty="all">All</button>
-                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
-                  data-difficulty="easy">Easy</button>
-                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
-                  data-difficulty="medium">Medium</button>
-                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
-                  data-difficulty="hard">Hard</button>
-                <button class="btn btn-outline filter-btn" style="padding: 9px 18px; font-size: 0.875rem;"
-                  data-difficulty="expert">Expert</button>
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-gearwork-cryptex.jpg" alt="Gearwork Cryptex 3D wooden gear puzzle" loading="lazy">
+              <span class="badge badge-new">New</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~4 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">3D mechanical</span>
+                <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(41)</small></span>
+              </div>
+              <h3><a href="product.html">Gearwork Cryptex</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-hard">Hard</span></li>
+                <li><i class="ph ph-user"></i> Adults</li>
+                <li><i class="ph ph-puzzle-piece"></i> 92 parts</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$46.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
               </div>
             </div>
+          </article>
 
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-wooden-knot.jpg" alt="Bamboo wooden knot brain teaser" loading="lazy">
+              
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~1.5 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Brain teaser</span>
+                <span class="rating" aria-label="Rated 4.7 out of 5"><i class="ph-fill ph-star"></i> 4.7 <small>(188)</small></span>
+              </div>
+              <h3><a href="product.html">Wooden Knot Puzzle</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-hard">Hard</span></li>
+                <li><i class="ph ph-user"></i> Ages 13+</li>
+                <li><i class="ph ph-puzzle-piece"></i> 6 parts</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$18.50</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+          <!-- /CARDS:featured -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalogue with filters -->
+    <section id="catalogue" class="section band-soft">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-funnel"></i> All puzzles</span>
+          <h2>Find the right challenge</h2>
+          <p>Filter by age, difficulty, skill, price, piece count and puzzle type. Results update instantly.</p>
+        </div>
+
+        <div class="shop-layout">
+          <aside class="filter-panel" id="filterPanel" aria-label="Product filters">
+            <div class="filter-panel-head">
+              <h3><i class="ph ph-sliders-horizontal"></i> Filters</h3>
+              <button type="button" class="filter-reset" id="filterReset">Reset all</button>
+            </div>
+
+            <div class="filter-field">
+              <label for="f-type" class="form-label">Puzzle type</label>
+              <select id="f-type" class="form-control" data-filter="type">
+                <option value="all">All types</option>
+                <option value="jigsaw">Jigsaw puzzles</option>
+                <option value="brain-teaser">Brain teasers</option>
+                <option value="mechanical">3D mechanical</option>
+                <option value="puzzle-box">Puzzle boxes</option>
+                <option value="kids">Kids puzzles</option>
+              </select>
+            </div>
+
+            <div class="filter-field">
+              <label for="f-age" class="form-label">Age group</label>
+              <select id="f-age" class="form-control" data-filter="age">
+                <option value="all">All ages</option>
+                <option value="3-6">Ages 3 &ndash; 6</option>
+                <option value="7-12">Ages 7 &ndash; 12</option>
+                <option value="13+">Ages 13+</option>
+                <option value="adult">Adults</option>
+              </select>
+            </div>
+
+            <div class="filter-field">
+              <label for="f-difficulty" class="form-label">Difficulty</label>
+              <select id="f-difficulty" class="form-control" data-filter="difficulty">
+                <option value="all">Any difficulty</option>
+                <option value="easy">Easy &middot; under 2 hrs</option>
+                <option value="medium">Medium &middot; an evening</option>
+                <option value="hard">Hard &middot; a weekend</option>
+                <option value="expert">Expert &middot; days</option>
+              </select>
+            </div>
+
+            <div class="filter-field">
+              <label for="f-skill" class="form-label">Skill it builds</label>
+              <select id="f-skill" class="form-control" data-filter="skill">
+                <option value="all">Any skill</option>
+                <option value="logic">Logic</option>
+                <option value="spatial">Spatial reasoning</option>
+                <option value="focus">Focus &amp; patience</option>
+                <option value="dexterity">Dexterity</option>
+                <option value="memory">Memory</option>
+              </select>
+            </div>
+
+            <div class="filter-field">
+              <label for="f-price" class="form-label">Price</label>
+              <select id="f-price" class="form-control" data-filter="price">
+                <option value="all">Any price</option>
+                <option value="0-25">Under $25</option>
+                <option value="25-50">$25 &ndash; $50</option>
+                <option value="50-">$50 and over</option>
+              </select>
+            </div>
+
+            <div class="filter-field">
+              <label for="f-pieces" class="form-label">Piece count</label>
+              <select id="f-pieces" class="form-control" data-filter="pieces">
+                <option value="all">Any piece count</option>
+                <option value="0-99">Under 100</option>
+                <option value="100-500">100 &ndash; 500</option>
+                <option value="501-1000">501 &ndash; 1000</option>
+                <option value="1001-">Over 1000</option>
+              </select>
+            </div>
+          </aside>
+
+          <div class="shop-results">
+            <div class="results-bar">
+              <button type="button" class="btn btn-outline btn-sm filter-toggle" id="filterToggle"
+                aria-controls="filterPanel" aria-expanded="false"><i class="ph ph-sliders-horizontal"></i>
+                Filters</button>
+              <p class="results-count" id="resultsCount" aria-live="polite">13 puzzles</p>
+              <label class="sort-field">
+                <span>Sort</span>
+                <select id="sortSelect" class="form-control">
+                  <option value="featured">Featured</option>
+                  <option value="price-asc">Price: low to high</option>
+                  <option value="price-desc">Price: high to low</option>
+                  <option value="rating">Top rated</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="shop-grid" id="productGrid">
+              <!-- CARDS:catalogue -->
+              <article class="shop-card reveal" data-type="puzzle-box" data-age="adult" data-difficulty="expert" data-skill="logic" data-price="68" data-pieces="14" data-rating="4.9" data-order="0">
+                <a href="product.html" class="shop-card-media">
+                  <img src="assets/images/card-davinci-codex.jpg" alt="The DaVinci Codex wooden puzzle box" loading="lazy">
+                  <span class="badge badge-hot">Best Seller</span>
+                  <span class="shop-time"><i class="ph-bold ph-clock"></i> ~3.5 hrs</span>
+                </a>
+                <div class="shop-card-body">
+                  <div class="shop-card-top">
+                    <span class="shop-type">Puzzle box</span>
+                    <span class="rating" aria-label="Rated 4.9 out of 5"><i class="ph-fill ph-star"></i> 4.9 <small>(403)</small></span>
+                  </div>
+                  <h3><a href="product.html">The DaVinci Codex Box</a></h3>
+                  <ul class="shop-meta">
+                    <li><span class="diff diff-expert">Expert</span></li>
+                    <li><i class="ph ph-user"></i> Adults</li>
+                    <li><i class="ph ph-puzzle-piece"></i> 14 steps</li>
+                  </ul>
+                  <div class="shop-card-foot">
+                    <span class="price">$68.00</span>
+                    <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="shop-card reveal" data-type="jigsaw" data-age="adult" data-difficulty="medium" data-skill="focus" data-price="24.99" data-pieces="1000" data-rating="4.8" data-order="1">
+                <a href="product.html" class="shop-card-media">
+                  <img src="assets/images/card-autumn-leaves.jpg" alt="Autumn Leaves jigsaw puzzle" loading="lazy">
+                  <span class="badge badge-hot">Best Seller</span>
+                  <span class="shop-time"><i class="ph-bold ph-clock"></i> ~6 hrs</span>
+                </a>
+                <div class="shop-card-body">
+                  <div class="shop-card-top">
+                    <span class="shop-type">Jigsaw</span>
+                    <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(312)</small></span>
+                  </div>
+                  <h3><a href="product.html">Autumn Leaves 1000pc</a></h3>
+                  <ul class="shop-meta">
+                    <li><span class="diff diff-medium">Medium</span></li>
+                    <li><i class="ph ph-user"></i> Adults</li>
+                    <li><i class="ph ph-puzzle-piece"></i> 1000 pcs</li>
+                  </ul>
+                  <div class="shop-card-foot">
+                    <span class="price">$24.99</span>
+                    <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="shop-card reveal" data-type="mechanical" data-age="adult" data-difficulty="expert" data-skill="dexterity" data-price="42" data-pieces="1" data-rating="4.7" data-order="2">
+                <a href="product.html" class="shop-card-media">
+                  <img src="assets/images/card-titanium-labyrinth.jpg" alt="Titanium gravity labyrinth puzzle" loading="lazy">
+                  <span class="badge badge-hot">Best Seller</span>
+                  <span class="shop-time"><i class="ph-bold ph-clock"></i> ~1.5 hrs</span>
+                </a>
+                <div class="shop-card-body">
+                  <div class="shop-card-top">
+                    <span class="shop-type">3D mechanical</span>
+                    <span class="rating" aria-label="Rated 4.7 out of 5"><i class="ph-fill ph-star"></i> 4.7 <small>(122)</small></span>
+                  </div>
+                  <h3><a href="product.html">Titanium Gravity Labyrinth</a></h3>
+                  <ul class="shop-meta">
+                    <li><span class="diff diff-expert">Expert</span></li>
+                    <li><i class="ph ph-user"></i> Adults</li>
+                    <li><i class="ph ph-puzzle-piece"></i> 1 sphere</li>
+                  </ul>
+                  <div class="shop-card-foot">
+                    <span class="price">$42.00</span>
+                    <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="shop-card reveal" data-type="kids" data-age="3-6" data-difficulty="easy" data-skill="memory" data-price="15" data-pieces="24" data-rating="4.9" data-order="3">
+                <a href="product.html" class="shop-card-media">
+                  <img src="assets/images/card-alphabet-animals.jpg" alt="Alphabet Animals chunky kids puzzle" loading="lazy">
+                  <span class="badge badge-hot">Best Seller</span>
+                  <span class="shop-time"><i class="ph-bold ph-clock"></i> ~20 min</span>
+                </a>
+                <div class="shop-card-body">
+                  <div class="shop-card-top">
+                    <span class="shop-type">Kids</span>
+                    <span class="rating" aria-label="Rated 4.9 out of 5"><i class="ph-fill ph-star"></i> 4.9 <small>(264)</small></span>
+                  </div>
+                  <h3><a href="product.html">Alphabet Animals</a></h3>
+                  <ul class="shop-meta">
+                    <li><span class="diff diff-easy">Easy</span></li>
+                    <li><i class="ph ph-user"></i> Ages 3–6</li>
+                    <li><i class="ph ph-puzzle-piece"></i> 24 pcs</li>
+                  </ul>
+                  <div class="shop-card-foot">
+                    <span class="price">$15.00</span>
+                    <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="shop-card reveal" data-type="jigsaw" data-age="adult" data-difficulty="hard" data-skill="focus" data-price="29.99" data-pieces="2000" data-rating="4.8" data-order="4">
+                <a href="product.html" class="shop-card-media">
+                  <img src="assets/images/card-galaxy-explorer.jpg" alt="Galaxy Explorer jigsaw puzzle" loading="lazy">
+                  
+                  <span class="shop-time"><i class="ph-bold ph-clock"></i> ~14 hrs</span>
+                </a>
+                <div class="shop-card-body">
+                  <div class="shop-card-top">
+                    <span class="shop-type">Jigsaw</span>
+                    <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(97)</small></span>
+                  </div>
+                  <h3><a href="product.html">Galaxy Explorer 2000pc</a></h3>
+                  <ul class="shop-meta">
+                    <li><span class="diff diff-hard">Hard</span></li>
+                    <li><i class="ph ph-user"></i> Adults</li>
+                    <li><i class="ph ph-puzzle-piece"></i> 2000 pcs</li>
+                  </ul>
+                  <div class="shop-card-foot">
+                    <span class="price">$29.99</span>
+                    <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="shop-card reveal" data-type="mechanical" data-age="adult" data-difficulty="hard" data-skill="spatial" data-price="46" data-pieces="92" data-rating="4.8" data-order="5">
+                <a href="product.html" class="shop-card-media">
+                  <img src="assets/images/card-gearwork-cryptex.jpg" alt="Gearwork Cryptex 3D wooden gear puzzle" loading="lazy">
+                  <span class="badge badge-new">New</span>
+                  <span class="shop-time"><i class="ph-bold ph-clock"></i> ~4 hrs</span>
+                </a>
+                <div class="shop-card-body">
+                  <div class="shop-card-top">
+                    <span class="shop-type">3D mechanical</span>
+                    <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(41)</small></span>
+                  </div>
+                  <h3><a href="product.html">Gearwork Cryptex</a></h3>
+                  <ul class="shop-meta">
+                    <li><span class="diff diff-hard">Hard</span></li>
+                    <li><i class="ph ph-user"></i> Adults</li>
+                    <li><i class="ph ph-puzzle-piece"></i> 92 parts</li>
+                  </ul>
+                  <div class="shop-card-foot">
+                    <span class="price">$46.00</span>
+                    <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="shop-card reveal" data-type="brain-teaser" data-age="13+" data-difficulty="hard" data-skill="spatial" data-price="18.5" data-pieces="6" data-rating="4.7" data-order="6">
+                <a href="product.html" class="shop-card-media">
+                  <img src="assets/images/card-wooden-knot.jpg" alt="Bamboo wooden knot brain teaser" loading="lazy">
+                  
+                  <span class="shop-time"><i class="ph-bold ph-clock"></i> ~1.5 hrs</span>
+                </a>
+                <div class="shop-card-body">
+                  <div class="shop-card-top">
+                    <span class="shop-type">Brain teaser</span>
+                    <span class="rating" aria-label="Rated 4.7 out of 5"><i class="ph-fill ph-star"></i> 4.7 <small>(188)</small></span>
+                  </div>
+                  <h3><a href="product.html">Wooden Knot Puzzle</a></h3>
+                  <ul class="shop-meta">
+                    <li><span class="diff diff-hard">Hard</span></li>
+                    <li><i class="ph ph-user"></i> Ages 13+</li>
+                    <li><i class="ph ph-puzzle-piece"></i> 6 parts</li>
+                  </ul>
+                  <div class="shop-card-foot">
+                    <span class="price">$18.50</span>
+                    <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="shop-card reveal" data-type="jigsaw" data-age="13+" data-difficulty="medium" data-skill="focus" data-price="36" data-pieces="1000" data-rating="4.8" data-order="7">
+                <a href="product.html" class="shop-card-media">
+                  <img src="assets/images/card-nebula-symphony.jpg" alt="Nebula Symphony jigsaw puzzle" loading="lazy">
+                  <span class="badge badge-new">New</span>
+                  <span class="shop-time"><i class="ph-bold ph-clock"></i> ~8 hrs</span>
+                </a>
+                <div class="shop-card-body">
+                  <div class="shop-card-top">
+                    <span class="shop-type">Jigsaw</span>
+                    <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(58)</small></span>
+                  </div>
+                  <h3><a href="product.html">Nebula Symphony 1000pc</a></h3>
+                  <ul class="shop-meta">
+                    <li><span class="diff diff-medium">Medium</span></li>
+                    <li><i class="ph ph-user"></i> Ages 13+</li>
+                    <li><i class="ph ph-puzzle-piece"></i> 1000 pcs</li>
+                  </ul>
+                  <div class="shop-card-foot">
+                    <span class="price">$36.00</span>
+                    <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="shop-card reveal" data-type="puzzle-box" data-age="13+" data-difficulty="hard" data-skill="logic" data-price="54" data-pieces="8" data-rating="4.8" data-order="8">
+                <a href="product.html" class="shop-card-media">
+                  <img src="assets/images/card-walnut-secret-box.jpg" alt="Walnut sequential-discovery puzzle box" loading="lazy">
+                  <span class="badge badge-new">New</span>
+                  <span class="shop-time"><i class="ph-bold ph-clock"></i> ~2 hrs</span>
+                </a>
+                <div class="shop-card-body">
+                  <div class="shop-card-top">
+                    <span class="shop-type">Puzzle box</span>
+                    <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(34)</small></span>
+                  </div>
+                  <h3><a href="product.html">Walnut Secret Box</a></h3>
+                  <ul class="shop-meta">
+                    <li><span class="diff diff-hard">Hard</span></li>
+                    <li><i class="ph ph-user"></i> Ages 13+</li>
+                    <li><i class="ph ph-puzzle-piece"></i> 8 steps</li>
+                  </ul>
+                  <div class="shop-card-foot">
+                    <span class="price">$54.00</span>
+                    <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="shop-card reveal" data-type="kids" data-age="3-6" data-difficulty="easy" data-skill="dexterity" data-price="26" data-pieces="36" data-rating="4.9" data-order="9">
+                <a href="product.html" class="shop-card-media">
+                  <img src="assets/images/card-chunky-farmyard.jpg" alt="Chunky Farmyard wooden kids puzzles" loading="lazy">
+                  <span class="badge badge-new">New</span>
+                  <span class="shop-time"><i class="ph-bold ph-clock"></i> ~30 min</span>
+                </a>
+                <div class="shop-card-body">
+                  <div class="shop-card-top">
+                    <span class="shop-type">Kids</span>
+                    <span class="rating" aria-label="Rated 4.9 out of 5"><i class="ph-fill ph-star"></i> 4.9 <small>(150)</small></span>
+                  </div>
+                  <h3><a href="product.html">Chunky Farmyard 3-Pack</a></h3>
+                  <ul class="shop-meta">
+                    <li><span class="diff diff-easy">Easy</span></li>
+                    <li><i class="ph ph-user"></i> Ages 3–6</li>
+                    <li><i class="ph ph-puzzle-piece"></i> 3 × 12 pcs</li>
+                  </ul>
+                  <div class="shop-card-foot">
+                    <span class="price">$26.00</span>
+                    <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="shop-card reveal" data-type="mechanical" data-age="7-12" data-difficulty="expert" data-skill="spatial" data-price="22" data-pieces="26" data-rating="4.6" data-order="10">
+                <a href="product.html" class="shop-card-media">
+                  <img src="assets/images/product-mirror-magic-cube.jpg" alt="Mirror Magic shape-shifting cube" loading="lazy">
+                  <span class="badge badge-sale">-21%</span>
+                  <span class="shop-time"><i class="ph-bold ph-clock"></i> ~2 hrs</span>
+                </a>
+                <div class="shop-card-body">
+                  <div class="shop-card-top">
+                    <span class="shop-type">3D mechanical</span>
+                    <span class="rating" aria-label="Rated 4.6 out of 5"><i class="ph-fill ph-star"></i> 4.6 <small>(141)</small></span>
+                  </div>
+                  <h3><a href="product.html">Mirror Magic Cube</a></h3>
+                  <ul class="shop-meta">
+                    <li><span class="diff diff-expert">Expert</span></li>
+                    <li><i class="ph ph-user"></i> Ages 7–12</li>
+                    <li><i class="ph ph-puzzle-piece"></i> 3×3 twisty</li>
+                  </ul>
+                  <div class="shop-card-foot">
+                    <span class="price price-sale"><del>$28.00</del> $22.00</span>
+                    <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="shop-card reveal" data-type="brain-teaser" data-age="7-12" data-difficulty="medium" data-skill="logic" data-price="19.99" data-pieces="3" data-rating="4.5" data-order="11">
+                <a href="product.html" class="shop-card-media">
+                  <img src="assets/images/product-cast-iron-labyrinth.jpg" alt="Cast iron labyrinth brain teaser" loading="lazy">
+                  <span class="badge badge-sale">-20%</span>
+                  <span class="shop-time"><i class="ph-bold ph-clock"></i> ~45 min</span>
+                </a>
+                <div class="shop-card-body">
+                  <div class="shop-card-top">
+                    <span class="shop-type">Brain teaser</span>
+                    <span class="rating" aria-label="Rated 4.5 out of 5"><i class="ph-fill ph-star"></i> 4.5 <small>(76)</small></span>
+                  </div>
+                  <h3><a href="product.html">Cast Iron Labyrinth</a></h3>
+                  <ul class="shop-meta">
+                    <li><span class="diff diff-medium">Medium</span></li>
+                    <li><i class="ph ph-user"></i> Ages 7–12</li>
+                    <li><i class="ph ph-puzzle-piece"></i> 3 parts</li>
+                  </ul>
+                  <div class="shop-card-foot">
+                    <span class="price price-sale"><del>$24.99</del> $19.99</span>
+                    <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="shop-card reveal" data-type="brain-teaser" data-age="13+" data-difficulty="hard" data-skill="spatial" data-price="32" data-pieces="6" data-rating="4.6" data-order="12">
+                <a href="product.html" class="shop-card-media">
+                  <img src="assets/images/collection-wooden-brain-teaser.jpg" alt="Interlocking wooden burr puzzle" loading="lazy">
+                  <span class="badge badge-sale">-20%</span>
+                  <span class="shop-time"><i class="ph-bold ph-clock"></i> ~1 hr</span>
+                </a>
+                <div class="shop-card-body">
+                  <div class="shop-card-top">
+                    <span class="shop-type">Brain teaser</span>
+                    <span class="rating" aria-label="Rated 4.6 out of 5"><i class="ph-fill ph-star"></i> 4.6 <small>(89)</small></span>
+                  </div>
+                  <h3><a href="product.html">Six-Piece Burr Set</a></h3>
+                  <ul class="shop-meta">
+                    <li><span class="diff diff-hard">Hard</span></li>
+                    <li><i class="ph ph-user"></i> Ages 13+</li>
+                    <li><i class="ph ph-puzzle-piece"></i> 6 parts</li>
+                  </ul>
+                  <div class="shop-card-foot">
+                    <span class="price price-sale"><del>$40.00</del> $32.00</span>
+                    <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+                  </div>
+                </div>
+              </article>
+              <!-- /CARDS:catalogue -->
+            </div>
+
+            <div id="emptyState" class="empty-state" hidden>
+              <i class="ph-duotone ph-magnifying-glass"></i>
+              <h3>No puzzles match those filters</h3>
+              <p>Try widening the price or age range &mdash; or let us pick for you.</p>
+              <a href="index.html#finder" class="btn btn-primary btn-sm">Find Your Perfect Puzzle</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best sellers -->
+    <section id="best-sellers" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-trophy"></i> Best sellers</span>
+          <h2>The ones everyone comes back for</h2>
+          <p>Our four most re-ordered titles this year, across every age and difficulty.</p>
+        </div>
+        <div class="grid-4">
+          <!-- CARDS:best -->
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-davinci-codex.jpg" alt="The DaVinci Codex wooden puzzle box" loading="lazy">
+              <span class="badge badge-hot">Best Seller</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~3.5 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Puzzle box</span>
+                <span class="rating" aria-label="Rated 4.9 out of 5"><i class="ph-fill ph-star"></i> 4.9 <small>(403)</small></span>
+              </div>
+              <h3><a href="product.html">The DaVinci Codex Box</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-expert">Expert</span></li>
+                <li><i class="ph ph-user"></i> Adults</li>
+                <li><i class="ph ph-puzzle-piece"></i> 14 steps</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$68.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-autumn-leaves.jpg" alt="Autumn Leaves jigsaw puzzle" loading="lazy">
+              <span class="badge badge-hot">Best Seller</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~6 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Jigsaw</span>
+                <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(312)</small></span>
+              </div>
+              <h3><a href="product.html">Autumn Leaves 1000pc</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-medium">Medium</span></li>
+                <li><i class="ph ph-user"></i> Adults</li>
+                <li><i class="ph ph-puzzle-piece"></i> 1000 pcs</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$24.99</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-titanium-labyrinth.jpg" alt="Titanium gravity labyrinth puzzle" loading="lazy">
+              <span class="badge badge-hot">Best Seller</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~1.5 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">3D mechanical</span>
+                <span class="rating" aria-label="Rated 4.7 out of 5"><i class="ph-fill ph-star"></i> 4.7 <small>(122)</small></span>
+              </div>
+              <h3><a href="product.html">Titanium Gravity Labyrinth</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-expert">Expert</span></li>
+                <li><i class="ph ph-user"></i> Adults</li>
+                <li><i class="ph ph-puzzle-piece"></i> 1 sphere</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$42.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-alphabet-animals.jpg" alt="Alphabet Animals chunky kids puzzle" loading="lazy">
+              <span class="badge badge-hot">Best Seller</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~20 min</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Kids</span>
+                <span class="rating" aria-label="Rated 4.9 out of 5"><i class="ph-fill ph-star"></i> 4.9 <small>(264)</small></span>
+              </div>
+              <h3><a href="product.html">Alphabet Animals</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-easy">Easy</span></li>
+                <li><i class="ph ph-user"></i> Ages 3–6</li>
+                <li><i class="ph ph-puzzle-piece"></i> 24 pcs</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$15.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+          <!-- /CARDS:best -->
+        </div>
+      </div>
+    </section>
+
+    <!-- New arrivals -->
+    <section id="new-arrivals" class="section band-soft">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-sparkle"></i> New arrivals</span>
+          <h2>Just landed on the shelf</h2>
+          <p>Fresh from the workshop benches &mdash; solved, timed and rated by our team this month.</p>
+        </div>
+        <div class="grid-4">
+          <!-- CARDS:new -->
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-nebula-symphony.jpg" alt="Nebula Symphony jigsaw puzzle" loading="lazy">
+              <span class="badge badge-new">New</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~8 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Jigsaw</span>
+                <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(58)</small></span>
+              </div>
+              <h3><a href="product.html">Nebula Symphony 1000pc</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-medium">Medium</span></li>
+                <li><i class="ph ph-user"></i> Ages 13+</li>
+                <li><i class="ph ph-puzzle-piece"></i> 1000 pcs</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$36.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-walnut-secret-box.jpg" alt="Walnut sequential-discovery puzzle box" loading="lazy">
+              <span class="badge badge-new">New</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~2 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Puzzle box</span>
+                <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(34)</small></span>
+              </div>
+              <h3><a href="product.html">Walnut Secret Box</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-hard">Hard</span></li>
+                <li><i class="ph ph-user"></i> Ages 13+</li>
+                <li><i class="ph ph-puzzle-piece"></i> 8 steps</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$54.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-chunky-farmyard.jpg" alt="Chunky Farmyard wooden kids puzzles" loading="lazy">
+              <span class="badge badge-new">New</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~30 min</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Kids</span>
+                <span class="rating" aria-label="Rated 4.9 out of 5"><i class="ph-fill ph-star"></i> 4.9 <small>(150)</small></span>
+              </div>
+              <h3><a href="product.html">Chunky Farmyard 3-Pack</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-easy">Easy</span></li>
+                <li><i class="ph ph-user"></i> Ages 3–6</li>
+                <li><i class="ph ph-puzzle-piece"></i> 3 × 12 pcs</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$26.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/card-gearwork-cryptex.jpg" alt="Gearwork Cryptex 3D wooden gear puzzle" loading="lazy">
+              <span class="badge badge-new">New</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~4 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">3D mechanical</span>
+                <span class="rating" aria-label="Rated 4.8 out of 5"><i class="ph-fill ph-star"></i> 4.8 <small>(41)</small></span>
+              </div>
+              <h3><a href="product.html">Gearwork Cryptex</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-hard">Hard</span></li>
+                <li><i class="ph ph-user"></i> Adults</li>
+                <li><i class="ph ph-puzzle-piece"></i> 92 parts</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price">$46.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+          <!-- /CARDS:new -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Sale & offers -->
+    <section id="offers" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow"><i class="ph-fill ph-tag"></i> Sale &amp; offers</span>
+          <h2>Clever deals for clever people</h2>
+          <p>Limited stock at lower prices, plus standing offers that apply every day.</p>
+        </div>
+
+        <div class="offer-grid reveal">
+          <div class="offer-card offer-primary">
+            <i class="ph-fill ph-stack"></i>
+            <h3>Bundle &amp; save 15%</h3>
+            <p>Mix any three puzzles and save 15% on the lot.</p>
+          </div>
+          <div class="offer-card offer-teal">
+            <i class="ph-fill ph-truck"></i>
+            <h3>Free shipping over $60</h3>
+            <p>Tracked delivery, wrapped in recycled kraft.</p>
+          </div>
+          <div class="offer-card offer-ink">
+            <i class="ph-fill ph-graduation-cap"></i>
+            <h3>10% off for clubs &amp; schools</h3>
+            <p>Puzzle clubs, classrooms and libraries &mdash; just ask.</p>
           </div>
         </div>
 
-        <!-- Empty State -->
-        <div id="emptyState" style="display: none; text-align: center; padding: var(--space-8);">
-          <i class="ph-duotone ph-magnifying-glass"
-            style="font-size: 4rem; color: var(--color-text-muted); margin-block-end: var(--space-3);"></i>
-          <h3>No puzzles found</h3>
-          <p style="color: var(--color-text-muted);">Try adjusting your filters to find what you're looking for.</p>
+        <div class="sale-grid">
+          <!-- CARDS:sale -->
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/product-mirror-magic-cube.jpg" alt="Mirror Magic shape-shifting cube" loading="lazy">
+              <span class="badge badge-sale">-21%</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~2 hrs</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">3D mechanical</span>
+                <span class="rating" aria-label="Rated 4.6 out of 5"><i class="ph-fill ph-star"></i> 4.6 <small>(141)</small></span>
+              </div>
+              <h3><a href="product.html">Mirror Magic Cube</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-expert">Expert</span></li>
+                <li><i class="ph ph-user"></i> Ages 7–12</li>
+                <li><i class="ph ph-puzzle-piece"></i> 3×3 twisty</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price price-sale"><del>$28.00</del> $22.00</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="shop-card reveal">
+            <a href="product.html" class="shop-card-media">
+              <img src="assets/images/product-cast-iron-labyrinth.jpg" alt="Cast iron labyrinth brain teaser" loading="lazy">
+              <span class="badge badge-sale">-20%</span>
+              <span class="shop-time"><i class="ph-bold ph-clock"></i> ~45 min</span>
+            </a>
+            <div class="shop-card-body">
+              <div class="shop-card-top">
+                <span class="shop-type">Brain teaser</span>
+                <span class="rating" aria-label="Rated 4.5 out of 5"><i class="ph-fill ph-star"></i> 4.5 <small>(76)</small></span>
+              </div>
+              <h3><a href="product.html">Cast Iron Labyrinth</a></h3>
+              <ul class="shop-meta">
+                <li><span class="diff diff-medium">Medium</span></li>
+                <li><i class="ph ph-user"></i> Ages 7–12</li>
+                <li><i class="ph ph-puzzle-piece"></i> 3 parts</li>
+              </ul>
+              <div class="shop-card-foot">
+                <span class="price price-sale"><del>$24.99</del> $19.99</span>
+                <a href="product.html" class="btn btn-outline btn-sm">View details</a>
+              </div>
+            </div>
+          </article>
+          <!-- /CARDS:sale -->
         </div>
-
-        <!-- Product Grid -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-6);"
-          id="productGrid">
-
-          <!-- Product 1 -->
-          <div class="card product-card reveal" data-category="jigsaw" data-difficulty="medium">
-            <img src="assets/images/product-autumn-leaves-jigsaw.jpg" alt="Autumn Leaves Jigsaw"
-              style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
-            <div
-              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-end: var(--space-2);">
-              <span class="badge"
-                style="background: var(--color-secondary-soft); color: var(--color-secondary); border-color: transparent;">Medium</span>
-              <strong style="font-family: var(--font-heading); font-size: 1.2rem;">$24.99</strong>
-            </div>
-            <h3 style="font-size: 1.25rem; margin-block-end: var(--space-1); text-align: start; width: 100%;"> Leaves
-              Jigsaw</h3>
-            <p
-              style="color: var(--color-text-muted); text-align: start; width: 100%; font-size: 0.9rem; margin-block-end: var(--space-4);">
-              1000 Pieces</p>
-            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire Now</a>
-          </div>
-
-          <!-- Product 2 -->
-          <div class="card product-card reveal" data-category="brain-teaser" data-difficulty="hard">
-            <img src="assets/images/product-wooden-knot-puzzle.jpg" alt="Wooden Knot Puzzle"
-              style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
-            <div
-              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-end: var(--space-2);">
-              <span class="badge"
-                style="background: var(--color-primary-soft); color: var(--color-primary); border-color: transparent;">Hard</span>
-              <strong style="font-family: var(--font-heading); font-size: 1.2rem;">$18.50</strong>
-            </div>
-            <h3 style="font-size: 1.25rem; margin-block-end: var(--space-1); text-align: start; width: 100%;">Wooden
-              Knot Puzzle</h3>
-            <p
-              style="color: var(--color-text-muted); text-align: start; width: 100%; font-size: 0.9rem; margin-block-end: var(--space-4);">
-              Solid Bamboo</p>
-            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire Now</a>
-          </div>
-
-          <!-- Product 3 -->
-          <div class="card product-card reveal" data-category="kids" data-difficulty="easy">
-            <img src="assets/images/product-alphabet-animals-kids.jpg" alt="Alphabet Animals"
-              style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
-            <div
-              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-end: var(--space-2);">
-              <span class="badge"
-                style="background: var(--color-secondary-soft); color: var(--color-success); border-color: transparent;">Easy</span>
-              <strong style="font-family: var(--font-heading); font-size: 1.2rem;">$15.00</strong>
-            </div>
-            <h3 style="font-size: 1.25rem; margin-block-end: var(--space-1); text-align: start; width: 100%;">Alphabet
-              Animals</h3>
-            <p
-              style="color: var(--color-text-muted); text-align: start; width: 100%; font-size: 0.9rem; margin-block-end: var(--space-4);">
-              24 Large Pieces</p>
-            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire Now</a>
-          </div>
-
-          <!-- Product 4 -->
-          <div class="card product-card reveal" data-category="brain-teaser" data-difficulty="expert">
-            <img src="assets/images/product-mirror-magic-cube.jpg" alt="Rubik's Style Cube"
-              style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
-            <div
-              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-end: var(--space-2);">
-              <span class="badge"
-                style="background: rgba(107, 78, 158, 0.14); color: var(--color-violet); border-color: transparent;">Expert</span>
-              <strong style="font-family: var(--font-heading); font-size: 1.2rem;">$22.00</strong>
-            </div>
-            <h3 style="font-size: 1.25rem; margin-block-end: var(--space-1); text-align: start; width: 100%;">Mirror
-              Magic Cube</h3>
-            <p
-              style="color: var(--color-text-muted); text-align: start; width: 100%; font-size: 0.9rem; margin-block-end: var(--space-4);">
-              Shape Shifter</p>
-            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire Now</a>
-          </div>
-
-          <!-- Product 5 -->
-          <div class="card product-card reveal" data-category="jigsaw" data-difficulty="hard">
-            <img src="assets/images/product-galaxy-explorer-jigsaw.jpg" alt="Galaxy Explorer"
-              style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
-            <div
-              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-end: var(--space-2);">
-              <span class="badge"
-                style="background: var(--color-primary-soft); color: var(--color-primary); border-color: transparent;">Hard</span>
-              <strong style="font-family: var(--font-heading); font-size: 1.2rem;">$29.99</strong>
-            </div>
-            <h3 style="font-size: 1.25rem; margin-block-end: var(--space-1); text-align: start; width: 100%;">Galaxy
-              Explorer</h3>
-            <p
-              style="color: var(--color-text-muted); text-align: start; width: 100%; font-size: 0.9rem; margin-block-end: var(--space-4);">
-              2000 Pieces</p>
-            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire Now</a>
-          </div>
-
-          <!-- Product 6 -->
-          <div class="card product-card reveal" data-category="brain-teaser" data-difficulty="medium">
-            <img src="assets/images/product-cast-iron-labyrinth.jpg" alt="Cast Iron Labyrinth"
-              style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); margin-block-end: var(--space-4);">
-            <div
-              style="display: flex; justify-content: space-between; width: 100%; align-items: center; margin-block-end: var(--space-2);">
-              <span class="badge"
-                style="background: var(--color-secondary-soft); color: var(--color-secondary); border-color: transparent;">Medium</span>
-              <strong style="font-family: var(--font-heading); font-size: 1.2rem;">$19.99</strong>
-            </div>
-            <h3 style="font-size: 1.25rem; margin-block-end: var(--space-1); text-align: start; width: 100%;">Cast Iron
-              Labyrinth</h3>
-            <p
-              style="color: var(--color-text-muted); text-align: start; width: 100%; font-size: 0.9rem; margin-block-end: var(--space-4);">
-              Solid Cast Iron</p>
-            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire Now</a>
-          </div>
-
-        </div>
-
       </div>
     </section>
 
     <!-- Anatomy of a PuzzleLab box -->
-    <section class="section">
+    <section class="section band-soft">
       <div class="container">
         <div class="section-header reveal">
-          <span class="eyebrow"><i class="ph-fill ph-ruler"></i> Made properly</span>
-          <h2>Anatomy of a PuzzleLab box</h2>
-          <p>The same four standards apply to every product on this page, whether it costs fifteen dollars or eighty.
-          </p>
+          <span class="eyebrow"><i class="ph-fill ph-ruler"></i> Compare at a glance</span>
+          <h2>Sizes, solve times &amp; materials</h2>
+          <p>How each range compares, so you know exactly what you are getting and how long it will take.</p>
         </div>
 
-        <div class="story-grid">
-          <div class="media-frame reveal" style="aspect-ratio: 4/3;">
-            <img src="assets/images/anatomy-puzzle-box-materials.jpg"
-              alt="Close-up of puzzle pieces and packaging materials">
-          </div>
-          <div class="story-content reveal">
-          <ul class="spec-list">
-            <li class="spec-item">
-              <span class="icon-tile"><i class="ph-fill ph-stack"></i></span>
-              <div>
-                <h4>2.2mm blueboard core</h4>
-                <p>Recycled Dutch blueboard with a matte linen top sheet. Pieces hold their shape after hundreds of
-                  solves and never delaminate at the tabs.</p>
-              </div>
-            </li>
-            <li class="spec-item">
-              <span class="icon-tile teal"><i class="ph-fill ph-scissors"></i></span>
-              <div>
-                <h4>Steel-rule random cut</h4>
-                <p>No repeated piece shapes across a single puzzle, so a near-fit is never a false positive &mdash;
-                  every click is the right one.</p>
-              </div>
-            </li>
-            <li class="spec-item">
-              <span class="icon-tile gold"><i class="ph-fill ph-drop"></i></span>
-              <div>
-                <h4>Soy-based, low-glare inks</h4>
-                <p>Colour-matched to the original artwork and finished with an anti-glare coat, so long evening sessions
-                  stay easy on the eyes.</p>
-              </div>
-            </li>
-            <li class="spec-item">
-              <span class="icon-tile violet"><i class="ph-fill ph-shield-check"></i></span>
-              <div>
-                <h4>Missing-piece guarantee</h4>
-                <p>Every box is counted by weight and by hand. If a piece is ever missing, we replace the whole puzzle
-                  &mdash; no receipt hunting.</p>
-              </div>
-            </li>
-          </ul>
-          </div>
-        </div>
-
-        <div class="table-wrap reveal" style="margin-block-start: var(--space-8);">
+        <div class="table-wrap reveal">
           <table class="detail-table">
-            <caption class="sr-only"
-              style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Specifications
-              by puzzle range</caption>
             <thead>
               <tr>
                 <th scope="col">Range</th>
@@ -350,10 +1016,17 @@
               </tr>
               <tr>
                 <td data-label="Range"><strong>Brain teaser</strong></td>
-                <td data-label="Pieces">4 &ndash; 22 parts</td>
+                <td data-label="Pieces">3 &ndash; 22 parts</td>
                 <td data-label="Finished size">Handheld</td>
                 <td data-label="Typical solve">20 min &ndash; 4 hrs</td>
                 <td data-label="Materials">Beech, bamboo or cast alloy</td>
+              </tr>
+              <tr>
+                <td data-label="Range"><strong>3D mechanical</strong></td>
+                <td data-label="Pieces">6 &ndash; 120 parts</td>
+                <td data-label="Finished size">8 &ndash; 15 cm</td>
+                <td data-label="Typical solve">1 &ndash; 5 hrs</td>
+                <td data-label="Materials">Laser-cut birch, titanium</td>
               </tr>
               <tr>
                 <td data-label="Range"><strong>Puzzle box</strong></td>
@@ -367,50 +1040,94 @@
         </div>
       </div>
     </section>
+
+    <!-- CTA band -->
+    <section class="section cta-section">
+      <div class="container reveal">
+        <div class="cta-band">
+          <div class="puzzle-grid-overlay"></div>
+          <div class="cta-band-inner">
+            <h2>Not sure where to start?</h2>
+            <p>Answer three quick questions and we&rsquo;ll match you with a puzzle you&rsquo;ll actually finish.</p>
+            <div class="btn-row">
+              <a href="index.html#finder" class="btn btn-light"><i class="ph-fill ph-magic-wand"></i> Find Your Perfect Puzzle</a>
+              <a href="gifting.html" class="btn btn-ghost-light"><i class="ph-fill ph-gift"></i> Shop Gifts</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
+
+      <!-- Newsletter strip -->
+      <div class="footer-newsletter">
+        <div>
+          <h3>Get the monthly puzzle drop</h3>
+          <p>New arrivals, limited editions and one brain teaser to solve over coffee. One email a month.</p>
+        </div>
+        <form class="newsletter-form footer-newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="you@example.com" aria-label="Email address" class="form-control">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+
       <div class="footer-grid">
-        <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-block-end: var(--space-3);">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo">
             <img src="assets/images/puzzlelab-logo.svg" alt="PuzzleLab">
           </a>
-          <p style="color: var(--color-text-muted); margin-block-end: var(--space-4);">Premium puzzles and brain games
-            for curious minds of all ages.</p>
-          <div class="footer-social" style="display: flex; gap: var(--space-2);">
-            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;"
-              aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;" aria-label="Facebook"><i
-                class="ph ph-facebook-logo"></i></a>
-            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;" aria-label="X"><i
-                class="ph ph-x-logo"></i></a>
+          <p>A specialty store for jigsaw puzzles, brain teasers, 3D mechanical puzzles and logic games &mdash;
+            every title solved in-house before it reaches the shelf.</p>
+          <div class="footer-social">
+            <a href="#" class="icon-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
           </div>
         </div>
+
         <div class="footer-col">
           <h4>Shop</h4>
           <ul class="footer-links">
-            <li><a href="products.html">All Products</a></li>
-            <li><a href="products.html">Jigsaw Puzzles</a></li>
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="shop.html?type=jigsaw#catalogue">Jigsaw Puzzles</a></li>
+            <li><a href="shop.html?type=brain-teaser#catalogue">Brain Teasers</a></li>
+            <li><a href="shop.html?type=mechanical#catalogue">3D Mechanical Puzzles</a></li>
+            <li><a href="shop.html?type=puzzle-box#catalogue">Puzzle Boxes</a></li>
+            <li><a href="shop.html?type=kids#catalogue">Kids Puzzles</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4>Discover</h4>
           <ul class="footer-links">
+            <li><a href="shop.html#best-sellers">Best Sellers</a></li>
+            <li><a href="shop.html#new-arrivals">New Arrivals</a></li>
+            <li><a href="shop.html#offers">Sale &amp; Offers</a></li>
+            <li><a href="index.html#finder">Help Me Choose</a></li>
+            <li><a href="gifting.html">Gift Guide</a></li>
             <li><a href="custom-photo-puzzle.html">Custom Photo Puzzles</a></li>
-            <li><a href="gifting.html">Gifting Bundles</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Contact Us</h4>
+          <h4>Company</h4>
           <ul class="footer-links">
-            <li><a href="contact.html">Send an Enquiry</a></li>
-            <li style="color: var(--color-text-muted);"><i class="ph ph-envelope-simple"></i>
-              hello@puzzlelab.example.com</li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#story">Our Story</a></li>
+            <li><a href="about.html#quality">Quality &amp; Safety</a></li>
+            <li><a href="about.html#community">Community</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>&copy; 2026 PuzzleLab. All rights reserved.</p>
       </div>

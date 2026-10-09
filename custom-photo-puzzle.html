@@ -20,7 +20,7 @@
   <div class="drawer-overlay"></div>
 
   <!-- Mobile Drawer -->
-  <aside class="drawer">
+  <aside class="drawer" aria-label="Mobile menu">
     <div class="drawer-header">
       <div class="logo">
         <img src="assets/images/puzzlelab-logo.svg" alt="PuzzleLab">
@@ -29,13 +29,17 @@
         <i class="ph ph-x"></i>
       </button>
     </div>
-    <nav class="nav-links drawer-links">
+
+    <nav class="nav-links drawer-links" aria-label="Mobile">
       <a href="index.html" class="nav-link">Home</a>
       <a href="home2.html" class="nav-link">Home 2</a>
-      <a href="products.html" class="nav-link">Products</a>
-      <a href="custom-photo-puzzle.html" class="nav-link active">Custom Photo Puzzle</a>
+      <a href="shop.html" class="nav-link">Shop</a>
+      <a href="custom-photo-puzzle.html" class="nav-link active" aria-current="page">Custom Puzzle</a>
       <a href="gifting.html" class="nav-link">Gifting</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
     </nav>
+
     <div class="nav-actions drawer-actions">
       <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
         <i class="ph ph-moon"></i>
@@ -45,7 +49,7 @@
       </button>
     </div>
 
-    <a href="contact.html" class="btn btn-primary drawer-cta">Contact <i class="ph ph-arrow-right"></i></a>
+    <a href="shop.html" class="btn btn-primary drawer-cta"><i class="ph-fill ph-puzzle-piece"></i> Shop Puzzles</a>
   </aside>
 
   <!-- Header -->
@@ -54,13 +58,17 @@
       <a href="index.html" class="logo">
         <img src="assets/images/puzzlelab-logo.svg" alt="PuzzleLab">
       </a>
-      <nav class="nav-links">
+
+      <nav class="nav-links" aria-label="Main">
         <a href="index.html" class="nav-link">Home</a>
         <a href="home2.html" class="nav-link">Home 2</a>
-        <a href="products.html" class="nav-link">Products</a>
-        <a href="custom-photo-puzzle.html" class="nav-link active">Custom Photo Puzzle</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="custom-photo-puzzle.html" class="nav-link active" aria-current="page">Custom Puzzle</a>
         <a href="gifting.html" class="nav-link">Gifting</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
+
       <div class="nav-actions">
         <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
           <i class="ph ph-moon"></i>
@@ -68,7 +76,7 @@
         <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">
           <i class="ph ph-arrows-left-right"></i>
         </button>
-        <a href="contact.html" class="btn btn-primary nav-btn">Contact</a>
+        <a href="shop.html" class="btn btn-primary nav-btn"><i class="ph-fill ph-puzzle-piece"></i> Shop Puzzles</a>
         <button class="icon-btn hamburger" aria-label="Open menu">
           <i class="ph ph-list"></i>
         </button>
@@ -138,13 +146,11 @@
 
     <!-- Upload & Preview UI -->
     <section id="upload-section" class="section band-soft">
-      <div class="container"
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--space-8);">
+      <div class="container configurator-grid">
 
         <!-- Controls -->
-        <div
-          style="background-color: var(--color-surface); padding: var(--space-6); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);">
-          <h3 style="margin-block-end: var(--space-6);">Configure Your Puzzle</h3>
+        <div class="panel">
+          <h3 style="margin-block-end: var(--space-5);">Configure Your Puzzle</h3>
 
           <div class="form-group">
             <label class="form-label">1. Upload Image (High Res Recommended)</label>
@@ -172,7 +178,7 @@
             </select>
           </div>
 
-          <div style="margin-block-start: var(--space-8); text-align: center;">
+          <div style="margin-block-start: var(--space-6); text-align: center;">
             <p style="color: var(--color-text-muted); margin-block-end: var(--space-4); font-size: 0.9rem;">Happy with
               your preview? Proceed to our enquiry form to lock in your custom order.</p>
             <a href="contact.html?type=custom" class="btn btn-primary" style="width: 100%;">Enquire to Order</a>
@@ -332,45 +338,72 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
+
+      <!-- Newsletter strip -->
+      <div class="footer-newsletter">
+        <div>
+          <h3>Get the monthly puzzle drop</h3>
+          <p>New arrivals, limited editions and one brain teaser to solve over coffee. One email a month.</p>
+        </div>
+        <form class="newsletter-form footer-newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="you@example.com" aria-label="Email address" class="form-control">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+
       <div class="footer-grid">
-        <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-block-end: var(--space-3);">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo">
             <img src="assets/images/puzzlelab-logo.svg" alt="PuzzleLab">
           </a>
-          <p style="color: var(--color-text-muted); margin-block-end: var(--space-4);">Premium puzzles and brain games
-            for curious minds of all ages.</p>
-          <div class="footer-social" style="display: flex; gap: var(--space-2);">
-            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;"
-              aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
-            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;" aria-label="Facebook"><i
-                class="ph ph-facebook-logo"></i></a>
-            <a href="#" class="icon-btn" style="width: 38px; height: 38px; font-size: 1.05rem;" aria-label="X"><i
-                class="ph ph-x-logo"></i></a>
+          <p>A specialty store for jigsaw puzzles, brain teasers, 3D mechanical puzzles and logic games &mdash;
+            every title solved in-house before it reaches the shelf.</p>
+          <div class="footer-social">
+            <a href="#" class="icon-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="icon-btn" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
           </div>
         </div>
+
         <div class="footer-col">
           <h4>Shop</h4>
           <ul class="footer-links">
-            <li><a href="products.html">All Products</a></li>
-            <li><a href="products.html">Jigsaw Puzzles</a></li>
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="shop.html?type=jigsaw#catalogue">Jigsaw Puzzles</a></li>
+            <li><a href="shop.html?type=brain-teaser#catalogue">Brain Teasers</a></li>
+            <li><a href="shop.html?type=mechanical#catalogue">3D Mechanical Puzzles</a></li>
+            <li><a href="shop.html?type=puzzle-box#catalogue">Puzzle Boxes</a></li>
+            <li><a href="shop.html?type=kids#catalogue">Kids Puzzles</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4>Discover</h4>
           <ul class="footer-links">
+            <li><a href="shop.html#best-sellers">Best Sellers</a></li>
+            <li><a href="shop.html#new-arrivals">New Arrivals</a></li>
+            <li><a href="shop.html#offers">Sale &amp; Offers</a></li>
+            <li><a href="index.html#finder">Help Me Choose</a></li>
+            <li><a href="gifting.html">Gift Guide</a></li>
             <li><a href="custom-photo-puzzle.html">Custom Photo Puzzles</a></li>
-            <li><a href="gifting.html">Gifting Bundles</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Contact Us</h4>
+          <h4>Company</h4>
           <ul class="footer-links">
-            <li><a href="contact.html">Send an Enquiry</a></li>
-            <li style="color: var(--color-text-muted);"><i class="ph ph-envelope-simple"></i>
-              hello@puzzlelab.example.com</li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#story">Our Story</a></li>
+            <li><a href="about.html#quality">Quality &amp; Safety</a></li>
+            <li><a href="about.html#community">Community</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>&copy; 2026 PuzzleLab. All rights reserved.</p>
       </div>

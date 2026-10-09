@@ -155,54 +155,97 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ==================================================
-     Product Filtering (Products Page)
+     Shop Filters & Sorting (Shop Page)
      ================================================== */
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const productCards = document.querySelectorAll('.product-card');
-  const emptyState = document.getElementById('emptyState');
+  const productGrid = document.getElementById('productGrid');
 
-  if (filterBtns.length > 0 && productCards.length > 0) {
-    let activeCategory = 'all';
-    let activeDifficulty = 'all';
+  if (productGrid) {
+    const cards = Array.from(productGrid.querySelectorAll('.shop-card'));
+    const filterSelects = document.querySelectorAll('select[data-filter]');
+    const sortSelect = document.getElementById('sortSelect');
+    const countEl = document.getElementById('resultsCount');
+    const emptyState = document.getElementById('emptyState');
+    const resetBtn = document.getElementById('filterReset');
+    const panel = document.getElementById('filterPanel');
+    const toggle = document.getElementById('filterToggle');
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // Handle active state on buttons
-        const filterGroup = btn.closest('.filter-group');
-        filterGroup.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+    // "25-50" style ranges; an open end ("50-") means no upper limit
+    const inRange = (value, range) => {
+      const [min, max] = range.split('-');
+      return value >= Number(min || 0) && (max === '' || value <= Number(max));
+    };
 
-        // Update active filters
-        if (btn.dataset.category) {
-          activeCategory = btn.dataset.category;
-        }
-        if (btn.dataset.difficulty) {
-          activeDifficulty = btn.dataset.difficulty;
-        }
+    const matches = (card, key, value) => {
+      if (value === 'all') return true;
+      if (key === 'price' || key === 'pieces') return inRange(Number(card.dataset[key]), value);
+      return card.dataset[key] === value;
+    };
 
-        filterProducts();
+    function applyFilters() {
+      let visible = 0;
+      cards.forEach(card => {
+        const show = Array.from(filterSelects).every(sel => matches(card, sel.dataset.filter, sel.value));
+        card.hidden = !show;
+        if (show) visible++;
       });
+      if (countEl) countEl.textContent = `${visible} ${visible === 1 ? 'puzzle' : 'puzzles'}`;
+      if (emptyState) emptyState.hidden = visible > 0;
+    }
+
+    function applySort() {
+      const mode = sortSelect ? sortSelect.value : 'featured';
+      const sorted = [...cards].sort((a, b) => {
+        if (mode === 'price-asc') return a.dataset.price - b.dataset.price;
+        if (mode === 'price-desc') return b.dataset.price - a.dataset.price;
+        if (mode === 'rating') return b.dataset.rating - a.dataset.rating;
+        return a.dataset.order - b.dataset.order;
+      });
+      sorted.forEach(card => productGrid.appendChild(card));
+    }
+
+    // Category links elsewhere use shop.html?type=jigsaw
+    const params = new URLSearchParams(window.location.search);
+    filterSelects.forEach(sel => {
+      const preset = params.get(sel.dataset.filter);
+      if (preset && sel.querySelector(`option[value="${CSS.escape(preset)}"]`)) sel.value = preset;
+      sel.addEventListener('change', applyFilters);
     });
 
-    function filterProducts() {
-      let visibleCount = 0;
+    if (sortSelect) sortSelect.addEventListener('change', applySort);
 
-      productCards.forEach(card => {
-        const categoryMatch = activeCategory === 'all' || card.dataset.category === activeCategory;
-        const difficultyMatch = activeDifficulty === 'all' || card.dataset.difficulty === activeDifficulty;
-
-        if (categoryMatch && difficultyMatch) {
-          card.style.display = 'flex';
-          visibleCount++;
-        } else {
-          card.style.display = 'none';
-        }
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        filterSelects.forEach(sel => { sel.value = 'all'; });
+        applyFilters();
       });
-
-      if (emptyState) {
-        emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
-      }
     }
+
+    if (toggle && panel) {
+      toggle.addEventListener('click', () => {
+        const open = panel.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    }
+
+    // Filtered cards may never scroll into view, so skip the reveal fade
+    cards.forEach(card => card.classList.add('visible'));
+    applyFilters();
+  }
+
+  /* ==================================================
+     Product Gallery (Product Page)
+     ================================================== */
+  const galleryMain = document.getElementById('galleryMain');
+
+  if (galleryMain) {
+    const thumbs = document.querySelectorAll('.gallery-thumb');
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        galleryMain.src = thumb.dataset.src;
+        galleryMain.alt = thumb.dataset.alt;
+        thumbs.forEach(t => t.classList.toggle('active', t === thumb));
+      });
+    });
   }
 
   /* ==================================================
@@ -311,21 +354,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const finder = document.getElementById('puzzleFinder');
 
   if (finder) {
-    const answers = { who: 'solo', time: 'short', vibe: 'calm' };
+    const answers = { who: 'solo', time: 'short', vibe: 'calm', gift: 'no' };
 
     const recommendations = {
-      'solo-short-calm':    { name: 'Coastal Mornings 500pc', type: 'Jigsaw · 500 pieces', match: 96, blurb: 'A soft-palette linen-finish jigsaw with oversized pieces — the perfect one-sitting wind-down after a long day.', tags: ['~2 hrs', 'Low difficulty', 'Matte anti-glare'], price: '$32', href: 'products.html' },
-      'solo-short-intense': { name: 'Titanium Sphere Labyrinth', type: 'Kinetic · 3D maze', match: 93, blurb: 'A machined multi-plane labyrinth that punishes impatience. Short sessions, steep learning curve, huge payoff.', tags: ['~1.5 hrs', 'Expert', 'Machined alloy'], price: '$42', href: 'products.html' },
-      'solo-long-calm':     { name: 'Nebula Symphony 1000pc', type: 'Jigsaw · 1000 pieces', match: 97, blurb: 'Laser-cut Dutch blueboard with deep celestial inks. Built to live on the table for a whole weekend.', tags: ['~6-8 hrs', 'Medium', 'Recycled board'], price: '$36', href: 'products.html' },
-      'solo-long-intense':  { name: 'The DaVinci Codex Box', type: 'Mechanical · Sequential', match: 98, blurb: 'Fourteen hidden steps in solid birch. Sliding dovetails, no instructions, and one very satisfying final click.', tags: ['~3.5 hrs', 'Expert', 'Solid birch'], price: '$68', href: 'products.html' },
-      'duo-short-calm':     { name: 'Botanical Press 500pc', type: 'Jigsaw · 500 pieces', match: 94, blurb: 'Pressed-flower artwork on thick chipboard — easy to split into two halves and solve side by side.', tags: ['~2.5 hrs', 'Low difficulty', 'Two-tray box'], price: '$34', href: 'products.html' },
-      'duo-short-intense':  { name: 'Tandem Logic Gates', type: 'Brain teaser · 2 player', match: 92, blurb: 'A head-to-head wooden logic duel. Two boards, one shared rule set, and a timer that keeps it merciless.', tags: ['~45 min', 'Hard', 'Beech wood'], price: '$54', href: 'products.html' },
-      'duo-long-calm':      { name: 'Grand Canyon 2000pc', type: 'Jigsaw · 2000 pieces', match: 95, blurb: 'A sprawling panoramic build made for two pairs of hands and several pots of coffee.', tags: ['~14 hrs', 'Medium', 'Panoramic'], price: '$49', href: 'products.html' },
-      'duo-long-intense':   { name: 'Bamboo Secret Box Duo', type: 'Mechanical · Sequential', match: 91, blurb: 'Two interlocking boxes that only open in the right order — you literally cannot finish this one alone.', tags: ['~4 hrs', 'Expert', 'Bamboo'], price: '$78', href: 'products.html' },
-      'family-short-calm':  { name: 'Woodland Friends 100pc', type: 'Kids · 100 pieces', match: 98, blurb: 'Chunky, child-safe pieces and a poster-sized reveal. Made for the twenty minutes before dinner.', tags: ['~30 min', 'Ages 4+', 'Chunky pieces'], price: '$22', href: 'products.html' },
-      'family-short-intense': { name: 'Acrylic Maze Cube', type: 'Kinetic · Handheld', match: 90, blurb: 'A pass-it-around gravity cube. Everyone gets a turn, nobody gets it first try.', tags: ['~20 min', 'Ages 8+', 'Cast acrylic'], price: '$28', href: 'products.html' },
-      'family-long-calm':   { name: 'World Map Floor Puzzle', type: 'Kids · 300 pieces', match: 96, blurb: 'A metre-wide floor build that doubles as a geography lesson. Wipe-clean coating included.', tags: ['~3 hrs', 'Ages 6+', 'Wipe-clean'], price: '$39', href: 'products.html' },
-      'family-long-intense': { name: 'Escape Room In A Box', type: 'Brain teaser · Multi-stage', match: 94, blurb: 'Nine linked puzzles, one story, and a shared ninety-minute countdown across the kitchen table.', tags: ['~90 min', 'Hard', '9 stages'], price: '$62', href: 'products.html' }
+      'solo-short-calm':    { name: 'Coastal Mornings 500pc', type: 'Jigsaw · 500 pieces', match: 96, blurb: 'A soft-palette linen-finish jigsaw with oversized pieces — the perfect one-sitting wind-down after a long day.', tags: ['~2 hrs', 'Low difficulty', 'Matte anti-glare'], price: '$32', href: 'shop.html' },
+      'solo-short-intense': { name: 'Titanium Sphere Labyrinth', type: 'Kinetic · 3D maze', match: 93, blurb: 'A machined multi-plane labyrinth that punishes impatience. Short sessions, steep learning curve, huge payoff.', tags: ['~1.5 hrs', 'Expert', 'Machined alloy'], price: '$42', href: 'shop.html' },
+      'solo-long-calm':     { name: 'Nebula Symphony 1000pc', type: 'Jigsaw · 1000 pieces', match: 97, blurb: 'Laser-cut Dutch blueboard with deep celestial inks. Built to live on the table for a whole weekend.', tags: ['~6-8 hrs', 'Medium', 'Recycled board'], price: '$36', href: 'shop.html' },
+      'solo-long-intense':  { name: 'The DaVinci Codex Box', type: 'Mechanical · Sequential', match: 98, blurb: 'Fourteen hidden steps in solid birch. Sliding dovetails, no instructions, and one very satisfying final click.', tags: ['~3.5 hrs', 'Expert', 'Solid birch'], price: '$68', href: 'shop.html' },
+      'duo-short-calm':     { name: 'Botanical Press 500pc', type: 'Jigsaw · 500 pieces', match: 94, blurb: 'Pressed-flower artwork on thick chipboard — easy to split into two halves and solve side by side.', tags: ['~2.5 hrs', 'Low difficulty', 'Two-tray box'], price: '$34', href: 'shop.html' },
+      'duo-short-intense':  { name: 'Tandem Logic Gates', type: 'Brain teaser · 2 player', match: 92, blurb: 'A head-to-head wooden logic duel. Two boards, one shared rule set, and a timer that keeps it merciless.', tags: ['~45 min', 'Hard', 'Beech wood'], price: '$54', href: 'shop.html' },
+      'duo-long-calm':      { name: 'Grand Canyon 2000pc', type: 'Jigsaw · 2000 pieces', match: 95, blurb: 'A sprawling panoramic build made for two pairs of hands and several pots of coffee.', tags: ['~14 hrs', 'Medium', 'Panoramic'], price: '$49', href: 'shop.html' },
+      'duo-long-intense':   { name: 'Bamboo Secret Box Duo', type: 'Mechanical · Sequential', match: 91, blurb: 'Two interlocking boxes that only open in the right order — you literally cannot finish this one alone.', tags: ['~4 hrs', 'Expert', 'Bamboo'], price: '$78', href: 'shop.html' },
+      'family-short-calm':  { name: 'Woodland Friends 100pc', type: 'Kids · 100 pieces', match: 98, blurb: 'Chunky, child-safe pieces and a poster-sized reveal. Made for the twenty minutes before dinner.', tags: ['~30 min', 'Ages 4+', 'Chunky pieces'], price: '$22', href: 'shop.html' },
+      'family-short-intense': { name: 'Acrylic Maze Cube', type: 'Kinetic · Handheld', match: 90, blurb: 'A pass-it-around gravity cube. Everyone gets a turn, nobody gets it first try.', tags: ['~20 min', 'Ages 8+', 'Cast acrylic'], price: '$28', href: 'shop.html' },
+      'family-long-calm':   { name: 'World Map Floor Puzzle', type: 'Kids · 300 pieces', match: 96, blurb: 'A metre-wide floor build that doubles as a geography lesson. Wipe-clean coating included.', tags: ['~3 hrs', 'Ages 6+', 'Wipe-clean'], price: '$39', href: 'shop.html' },
+      'family-long-intense': { name: 'Escape Room In A Box', type: 'Brain teaser · Multi-stage', match: 94, blurb: 'Nine linked puzzles, one story, and a shared ninety-minute countdown across the kitchen table.', tags: ['~90 min', 'Hard', '9 stages'], price: '$62', href: 'shop.html' }
     };
 
     const resultEl = document.getElementById('finderResult');
@@ -334,6 +377,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const key = `${answers.who}-${answers.time}-${answers.vibe}`;
       const r = recommendations[key];
       if (!r || !resultEl) return;
+
+      const isGift = answers.gift === 'yes';
+      const tags = isGift ? [...r.tags, 'Free gift wrap'] : r.tags;
+      const giftLink = isGift
+        ? `<a href="gifting.html" class="btn btn-ghost-light btn-sm"><i class="ph-fill ph-gift"></i> Shop Gifts</a>`
+        : '';
 
       resultEl.innerHTML = `
         <div class="finder-result-inner">
@@ -345,11 +394,14 @@ document.addEventListener('DOMContentLoaded', () => {
           <p>${r.blurb}</p>
           <div class="finder-meta">
             <span>${r.type}</span>
-            ${r.tags.map(t => `<span>${t}</span>`).join('')}
+            ${tags.map(t => `<span>${t}</span>`).join('')}
           </div>
           <div style="display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); flex-wrap: wrap; padding-block-start: var(--space-3); border-block-start: 1px solid rgba(255,255,255,0.14);">
             <strong style="font-family: var(--font-heading); font-size: 1.5rem;">${r.price}</strong>
-            <a href="${r.href}" class="btn btn-primary btn-sm">View in store <i class="ph ph-arrow-right"></i></a>
+            <div style="display: flex; gap: var(--space-2); flex-wrap: wrap;">
+              ${giftLink}
+              <a href="${r.href}" class="btn btn-primary btn-sm">View in store <i class="ph ph-arrow-right"></i></a>
+            </div>
           </div>
         </div>`;
     }
